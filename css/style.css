@@ -455,6 +455,10 @@ section {
 }
 
 
+.contact .content {
+    top: 375rem;
+}
+
 
 .contact .content h1 {
     font-size: 2rem;
@@ -485,7 +489,7 @@ section {
     margin: auto;
     padding-bottom: 3rem;
     position: absolute;
-    top: 360rem;
+    top: 350rem;
     left: 0;
     bottom: 0;
     right: 0;
