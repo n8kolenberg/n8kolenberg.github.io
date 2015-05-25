@@ -277,7 +277,7 @@ section {
 /* Portfolio ============================*/
 
 .portfolio {
-    height: 65rem;
+    height: 70rem;
     margin-top: -2rem;
     background-color: #34323F;
     width: 100%;
@@ -341,7 +341,7 @@ section {
 /* Contact ============================*/
 
 .contact {
-    height: 40rem;
+    height: 44rem;
     background-color: lightgrey;
     width: 100%;
     background-image: url('../img/getintouch.jpg');
@@ -349,16 +349,16 @@ section {
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
-    position: relative;
+    /*position: relative;*/
 }
 
 
 .contact .content {
     width: 60%;
-    height: 40%;
+    height: 35%;
     margin: auto;
     position: absolute;
-    top: 20rem;
+    top: 390rem;
     left: 0;
     bottom: 0;
     right: 0;
