@@ -219,7 +219,6 @@ section {
     background-blend-mode: screen;
     background-size: cover;
     background-position: 40% 100%;
-    background-attachment: fixed;
     position: relative;
     top: 0;
 }
@@ -348,8 +347,7 @@ section {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-attachment: fixed;
-    /*position: relative;*/
+    
 }
 
 
@@ -420,6 +418,7 @@ section {
 
 /* Skills MEDIA QUERY ============================*/
 
+
 .skills {
     height: 40rem;
     width: 100%;
@@ -429,6 +428,7 @@ section {
 
 .bg-image {
     height: 25rem;
+    background-attachment: fixed;
 }
 
 .bg-image h1 {
@@ -452,6 +452,7 @@ section {
 
 .contact {
     height: 42rem;
+    background-attachment: fixed;
 }
 
 
@@ -481,6 +482,7 @@ section {
 
     .contact {
         height: 42rem;
+        background-attachment: fixed;
     }
 
     .contact .content {
@@ -497,8 +499,12 @@ section {
     border-radius: 5px;
 }
 
+ /* Skills MEDIA QUERY 2 ============================*/
 
-
+    .bg-image {
+        height: 25rem;
+        background-attachment: fixed;
+    }
 
     /* Portfolio MEDIA QUERY 2 ============================*/
 
