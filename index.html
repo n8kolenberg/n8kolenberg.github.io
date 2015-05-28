@@ -4,61 +4,68 @@
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no">
 	<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700|Droid+Serif' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-	<section class="intro">
-		<div class="content">
+	<section class="intro container-fluid">
+		<div class="content row">
 			<div class="diamond">
-				<h2 class="masthead">Hi, I'm N8</h2>
-				<h3 class="masthead-intro">I make websites</h3>
+				<h2 class="masthead text-center">Hi, I'm N8</h2>
+				<h3 class="masthead-intro text-center">I create websites</h3>
 			</div>
 		</div>
 	</section>	
 
-	<section class="description">
-		<div class="content">
-			<h1>Introduction</h1>
-			<p>My name is Nathaniel, which I like to abbreviate as N8 (Nate). I started my career in business analysis at Google, but I noticed that my passion and motivation lay elsewhere. I found that I had a desire to create things that people would enjoy using. I turned to webdevelopment and started the Thinkful Front End Development course May 2015. While I'm still working on finishing this course (and plan to continue with Node.js thereafter), I want to showcase my portfolio (in progress) below. </p>
-			<p>I currently reside in London, UK, where I'm still working as an analyst, until I'm done with these courses and can officially change careers to Front End Web Development. In my free time, I like to study all that's needed to get to that end-goal, playing console games and dreaming of one day moving to Barcelona with my girlfriend and getting ourselves a pug!</p>
+	<section class="description container-fluid">
+		<div class="content row ">
+			<h1 class="text-center">Introduction</h1>
+			<p class="text-justify">My name is Nathaniel, which I like to abbreviate as N8 (Nate). I started my career in business analysis at Google, but I noticed that my passion and motivation lay elsewhere. I found that I had a desire to create things that people would enjoy using. I turned to webdevelopment and started the Thinkful Front End Development course May 2015. While I'm still working on finishing this course (and plan to continue with Node.js thereafter), I want to showcase my portfolio (in progress) below. </p>
+			<p class="text-justify">I currently reside in London, UK, where I'm still working as an analyst, until I'm done with these courses and can officially change careers to Front End Web Development. In my free time, I like to study all that's needed to get to that end-goal, playing console games and dreaming of one day moving to Barcelona with my girlfriend and getting ourselves a pug!</p>
 		</div>
 	</section>	
 
-	<section class="skills">
-		<div class="bg-image">
-			<h1>Inspirational Quote</h1>
+	<section class="inspiration container-fluid">
+				<blockquote>
+					<h1 class="text-center">Do or do not do, there is no try!</h1>
+					<footer class="text-center">Yoda</footer>
+				</blockquote>
+	</section>
+	
+	<section class="skills container-fluid">	
+		<div class="row">
+			<div class="content col-sm-12 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
+				<h1 class="text-center">Skills:</h1>
+				<ul class="languages text-center list-block">
+					<li>HTML</li>
+					<li>CSS3</li>
+					<li>JavaScript</li>
+					<li>jQuery</li>
+				</ul>
+			</div> 
 		</div>
-		<div class="content">
-			<h1>Skills:</h1>
-			<ul class="languages">
-				<li>HTML</li>
-				<li>CSS3</li>
-				<li>JavaScript</li>
-				<li>jQuery</li>
-			</ul>
 
-		</div> 
 	</section>	
 
-	<section class="portfolio">
-		<div class="content">
-			<h2>Portfolio:</h2>
-			<ul class="work">
-				<li>
-					<h3>Karma Landing Page Clone</h3>
+	<section class="portfolio container-fluid">
+		<div class="content row">
+			<h2 class="text-center">Portfolio:</h2>
+			<ul class="work list-inline">
+				<li class="col-md-6">
+					<h3 class="text-center">Karma Landing Page Clone</h3>
 					<img src="http://i.imgur.com/cFUCI6U.png">
 				</li>
-				<li>
-					<h3>Hacking the NY Times</h3>
+				<li class="col-md-6">
+					<h3 class="text-center">Hacking the NY Times</h3>
 					<img src="http://i.imgur.com/89gDXhr.png">
 				</li>
 			</ul>
 		</div> 
 	</section>	
 
-	<section class="contact">
-		<div class="content">
+	<section class="contact container-fluid">
+		<div class="content row">
 			<h1> Get in touch </h1>
 				<p> Email address: <a href="mailto: nkolenberg@gmail.com">nkolenberg@gmail.com</a>
 				</p>
@@ -68,11 +75,12 @@
 		</div> 
 	</section>	
 
-	<section class="social">
-		<div class="content">
+	<section class="social container-fluid">
+		<div class="content row">
 
 		</div> 
 	</section>	
+
 </body>
 
 </html>
