@@ -262,7 +262,7 @@ body {
 /* Portfolio ============================*/
 
 .portfolio {
-    height: 100rem;
+    height: 120rem;
     background-color: #34323F;
  
 }
@@ -321,21 +321,20 @@ body {
 .contact {
     height: 38rem;
     background-color: lightgrey;
-    width: 100%;
     background-image: url('../img/getintouch.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    
+    position: relative;
 }
 
 
 .contact .content {
-    width: 60%;
-    height: 30%;
+ /*   width: 50%;*/
+    height: 50%;
     margin: auto;
     position: absolute;
-    top: 900%; 
+    top: 0; 
     left: 0;
     bottom: 0;
     right: 0;
@@ -345,13 +344,13 @@ body {
 
 .contact .content h1 {
     font-family: "Droid Serif", sans-serif;
-    font-size: 1.75rem;
+    font-size: 2.5rem;
 }
 
 
 .contact .content p {
     font-weight: 400;
-    font-size: 1.075rem;
+    font-size: 1.5rem;
     text-align: center;
 }
 
