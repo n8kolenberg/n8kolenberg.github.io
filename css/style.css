@@ -324,11 +324,18 @@ body {
     blockquote {
         position: absolute;
         margin: auto;
-        top: -5rem;
+        top: 0;
         bottom: 0;
         left: 0;
         right: 0;
+    }
+    
+    .inspiration blockquote > h1 {
+        font-size: 2.5rem;
+    }
 
+     .inspiration blockquote > footer {
+        font-size: 1.75rem;
     }
 
 
