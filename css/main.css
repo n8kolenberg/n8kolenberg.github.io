@@ -12,8 +12,9 @@ body {
 ===========================*/
 .intro {
   height: 650px;
-  background-image: url("../img/mountains.jpeg");
-  background-color: #726049;
+  opacity: 0.9;
+  background: linear-gradient(to bottom, transparent 50%, whitesmoke 100%), url("../img/mountains.jpeg");
+  background: -webkit-linear-gradient(to bottom, transparent 50%, whitesmoke 100%), url("../img/mountains.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -132,10 +133,10 @@ section.portfolio {
   @media only screen and (min-width: 700px) {
     section.portfolio {
       height: 1890px; } }
-  @media only screen and (min-width: 1069px) {
+  @media only screen and (min-width: 1067px) {
     section.portfolio {
       height: 1260px; } }
-  @media only screen and (min-width: 1280px) {
+  @media only screen and (min-width: 1279px) {
     section.portfolio {
       height: 900px; } }
   section.portfolio .portfolioHeader {

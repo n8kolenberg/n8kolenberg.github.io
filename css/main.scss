@@ -20,7 +20,6 @@ $portfolioTextColor: whitesmoke;
     background-position: center;
 }
 
-
 /*General 
 ===========================*/
 
@@ -35,8 +34,9 @@ body {
 ===========================*/
 .intro {
 	height: $primarySectionHeight - 250px;
-	background-image: url('../img/mountains.jpeg');
-    background-color: #726049;
+	opacity: 0.9;
+	background: linear-gradient(to bottom, transparent 50%, whitesmoke 100%), url('../img/mountains.jpeg');
+	background: -webkit-linear-gradient(to bottom, transparent 50%, whitesmoke 100%), url('../img/mountains.jpeg');
     @include bgImageProps;
     background-blend-mode: screen;
     position: relative;
@@ -170,10 +170,10 @@ section.portfolio {
 	@media only screen and (min-width: 700px) {
 		height: $primarySectionHeight * 2.1;
 	}
-	@media only screen and (min-width: 1069px) {
+	@media only screen and (min-width: 1067px) {
 		height: $primarySectionHeight * 1.4;
 	}
-	@media only screen and (min-width: 1280px) {
+	@media only screen and (min-width: 1279px) {
 		height: $primarySectionHeight;
 	}
 
