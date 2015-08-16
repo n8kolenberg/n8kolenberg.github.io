@@ -1,39 +1,33 @@
 $(function(){
 	
 // init cubeportfolio
-    $('#js-grid-full-width').cubeportfolio({
-        layoutMode: 'mosaic',
+     $('#js-grid-awesome-work').cubeportfolio({
+        filters: '#js-filters-grid-awesome-work',
+        loadMore: '#js-loadMore-awesomeWork',
+        loadMoreAction: 'click',
+        layoutMode: 'grid',
         sortToPreventGaps: true,
-        defaultFilter: '*',
-        animationType: 'fadeOutTop',
-        gapHorizontal: 0,
-        gapVertical: 0,
-        gridAdjustment: 'responsive',
         mediaQueries: [{
-            width: 1500,
-            cols: 5
-        }, {
-            width: 1100,
+            width: 1200,
             cols: 4
         }, {
-            width: 800,
+            width: 1000,
             cols: 3
         }, {
-            width: 480,
+            width: 500,
             cols: 2
         }, {
             width: 320,
             cols: 1
         }],
+        defaultFilter: '*',
+        animationType: 'quicksand',
+        gapHorizontal: 0,
+        gapVertical: 0,
+        gridAdjustment: 'responsive',
         caption: 'zoom',
-        displayType: 'lazyLoading',
+        displayType: 'sequentially',
         displayTypeSpeed: 100,
-
-        // lightbox
-        lightboxDelegate: '.cbp-lightbox',
-        lightboxGallery: true,
-        lightboxTitleSrc: 'data-title',
-        lightboxCounter: '<div class="cbp-popup-lightbox-counter">{{current}} of {{total}}</div>',
     });
 
 

@@ -1,0 +1,320 @@
+/* Main Variables */
+$primaryFont : "Lato", sans-serif;
+$secondaryFont : "Droid Serif", sans-serif;
+$primary-color: rgba(44, 62, 80, 0.9);
+$secondary-color: rgba(175, 21, 56, 1);
+$primary-bgColor: #FAFAFA;
+$secondary-bgColor: rgba(240, 245, 247, 1);
+$primarySectionHeight: 900px;
+$headerFontSize: 35px;
+$pFontSize: 20px;
+
+$primaryPadding: 20px;
+
+$portfolioTextColor: whitesmoke;
+
+/* Mixins */
+@mixin bgImageProps {
+	background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+/*General 
+===========================*/
+
+body {
+	width: 100%;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: $primaryFont;
+}
+
+/* Introduction
+===========================*/
+.intro {
+	height: $primarySectionHeight - 250px;
+	background-image: url('../img/mountains.jpeg');
+    background-color: #726049;
+    @include bgImageProps;
+    background-blend-mode: screen;
+    position: relative;
+}
+
+
+
+.diamond {
+	position: absolute;
+	top: 5px;
+	left: 0;
+	right: 0;
+	bottom: 100px;
+	background-color: transparent;
+	width: 90%;
+	height: 150px;
+	margin: auto;
+
+	.masthead,
+	.masthead-intro {
+	    color: $primary-color;
+	    margin: auto;
+	    font-family: $secondaryFont;
+	    font-weight: bold;
+	    font-size: $primaryPadding * 2;
+	    
+	    @media only screen and (min-width: 418px) {
+	    	font-size: $primaryPadding * 2.2;
+	    }
+	}
+}
+
+
+/* Description
+===========================*/
+
+.description {
+	height: $primarySectionHeight * 1.6;
+	background-color: complement($primary-bgColor);
+	margin: auto;
+	@media only screen and (min-width: 500px) {
+			height: $primarySectionHeight * 1.4;
+		}
+	@media only screen and (min-width: 650px) {
+			height: $primarySectionHeight * 1.2;
+		}
+	@media only screen and (min-width: 900px) {
+			height: $primarySectionHeight * 0.9;
+		}
+	@media only screen and (min-width: 1000px) {
+			height: $primarySectionHeight * 0.8;
+		}
+	@media only screen and (min-width: 1200px) {
+			height: $primarySectionHeight * 0.7;
+		}					
+	.content {
+		width: 90%;
+		max-width: 900px;
+		padding-top: 20px;
+		margin: auto;
+		text-align: center;
+		@media only screen and (min-width: 900px) {
+			max-width: 1200px;
+			width: 100%;
+		}
+		
+		img.n8Image {
+			width: 95%;
+			max-width: 300px;
+			text-align: center;
+			margin: auto;
+			border-radius: 5px;
+			box-shadow: 1px 1px 1px $primary-color;
+			margin-top: $primaryPadding / 2;
+			margin-bottom: $primaryPadding;
+			@media only screen and (min-width: 900px) {
+				width: 30%;
+				float: left;
+				display: inline;
+				margin-left: $primaryPadding * 4;
+				margin-right: $primaryPadding * 4;
+			}
+			@media only screen and (min-width: 1200px) {
+				margin-left: $primaryPadding * 5;
+			}
+		}
+
+		h1 {
+			font-family: $secondaryFont;
+			font-size: $headerFontSize;
+			margin-top: 25px;
+			margin-bottom: 25px;
+		}
+
+		p {
+			font-family: $primaryFont;
+			line-height: 1.5;
+			font-size: $pFontSize;
+			font-weight: lighter;
+			span {
+				font-weight: bold;
+				font-style: italic;
+			}
+			@media only screen and (min-width: 900px) {
+				width: 50%;
+				float: left;
+				display: inline;
+				font-size: $pFontSize * 0.9;
+			}
+		}
+	}
+}
+
+/* Portfolio
+=========================== */
+section.portfolio {
+	height: $primarySectionHeight * 2.7;
+	background-color: $secondary-bgColor;
+	@media only screen and (min-width: 410px) {
+		height: $primarySectionHeight * 3;
+	}
+	@media only screen and (min-width: 480px) {
+		height: $primarySectionHeight * 3.3;
+	}
+	@media only screen and (min-width: 535px) {
+		height: $primarySectionHeight * 3.4;
+	}
+	@media only screen and (min-width: 540px) {
+		height: $primarySectionHeight * 1.5;
+	}
+	@media only screen and (min-width: 700px) {
+		height: $primarySectionHeight * 2.1;
+	}
+	@media only screen and (min-width: 1069px) {
+		height: $primarySectionHeight * 1.4;
+	}
+	@media only screen and (min-width: 1280px) {
+		height: $primarySectionHeight;
+	}
+
+	.portfolioHeader {
+		font-size: $headerFontSize;
+		font-family: $secondaryFont;
+		color: $primary-color;
+		text-align: center;
+		padding-top: $primaryPadding * 2.5;
+		padding-bottom: $primaryPadding * 1.5;
+		margin: auto;
+		width: 100%;
+		height: 100px;
+	}
+
+	#js-grid-awesome-work {
+		margin-top: 50px;
+		width: 95%;
+	}
+
+	.cbp-l-grid-mosaic .cbp-caption-activeWrap {
+		background-color: rgba(4, 4, 4, 0.7);
+	}
+
+	.cbp-l-grid-mosaic .cbp-l-caption-title {
+		color: $portfolioTextColor;
+	}
+
+	.cbp-l-grid-mosaic .cbp-l-caption-desc {
+		color: $portfolioTextColor;
+		opacity: 0.85;
+	}
+}
+
+
+/* Contact
+===========================*/
+.contact {
+	height: $primarySectionHeight - 300px;
+	background-image: url('../img/getintouch-mod1.jpeg');
+	@include bgImageProps;
+	position: relative;
+
+	.content {
+		height: 350px;
+		width: 350px;
+		margin: auto;
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		background-color: rgba(255, 255, 255, 0.7);
+		border-radius: 5px;
+
+		h1 {
+			text-align: center;
+			padding: $primaryPadding * 1.6;
+			font-family: $secondaryFont;
+			font-size: $headerFontSize;
+		}
+
+		p {
+			font-size: $primaryPadding * 1.1;
+			text-align: center;
+			padding: $primaryPadding * 1.2;
+
+			a {
+				text-decoration: none;
+				color: $secondary-color;
+				opacity: 0.8;
+				transition: all 100ms;
+				&:hover {
+					color: darken($secondary-color, 10%);
+					opacity: 1;
+				}
+			}
+		}
+	}
+}
+
+
+/* Social
+===========================*/
+
+.social {
+	height: $primarySectionHeight * 0.25;
+	background-color: rgba(240, 245, 247, 1);
+	ul {
+		font-family: 'fontello';
+		font-size: $headerFontSize * 1.275;
+		width: 100%;
+		margin: auto;
+		padding-top: 50px;
+
+		a {
+			text-decoration: none;
+			color: desaturate($secondary-color, 40%);
+			mix-blend-mode: multiply;
+			transition: all 300ms;
+			
+			&:hover {
+				padding: 0 5px;
+				opacity: 0.6;
+			}
+
+		}
+	}
+	.madeWLove {
+		text-align: center;
+		width: 200px;
+		font-family: $primaryFont;
+		color: $primary-color;
+		padding-top: $primaryPadding;
+		font-size: $primaryPadding;
+		margin: auto;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

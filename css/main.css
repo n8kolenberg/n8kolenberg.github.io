@@ -1,0 +1,228 @@
+/* Main Variables */
+/* Mixins */
+/*General 
+===========================*/
+body {
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif; }
+
+/* Introduction
+===========================*/
+.intro {
+  height: 650px;
+  background-image: url("../img/mountains.jpeg");
+  background-color: #726049;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: screen;
+  position: relative; }
+
+.diamond {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  right: 0;
+  bottom: 100px;
+  background-color: transparent;
+  width: 90%;
+  height: 150px;
+  margin: auto; }
+  .diamond .masthead,
+  .diamond .masthead-intro {
+    color: rgba(44, 62, 80, 0.9);
+    margin: auto;
+    font-family: "Droid Serif", sans-serif;
+    font-weight: bold;
+    font-size: 40px; }
+    @media only screen and (min-width: 418px) {
+      .diamond .masthead,
+      .diamond .masthead-intro {
+        font-size: 44px; } }
+
+/* Description
+===========================*/
+.description {
+  height: 1440px;
+  background-color: #fafafa;
+  margin: auto; }
+  @media only screen and (min-width: 500px) {
+    .description {
+      height: 1260px; } }
+  @media only screen and (min-width: 650px) {
+    .description {
+      height: 1080px; } }
+  @media only screen and (min-width: 900px) {
+    .description {
+      height: 810px; } }
+  @media only screen and (min-width: 1000px) {
+    .description {
+      height: 720px; } }
+  @media only screen and (min-width: 1200px) {
+    .description {
+      height: 630px; } }
+  .description .content {
+    width: 90%;
+    max-width: 900px;
+    padding-top: 20px;
+    margin: auto;
+    text-align: center; }
+    @media only screen and (min-width: 900px) {
+      .description .content {
+        max-width: 1200px;
+        width: 100%; } }
+    .description .content img.n8Image {
+      width: 95%;
+      max-width: 300px;
+      text-align: center;
+      margin: auto;
+      border-radius: 5px;
+      box-shadow: 1px 1px 1px rgba(44, 62, 80, 0.9);
+      margin-top: 10px;
+      margin-bottom: 20px; }
+      @media only screen and (min-width: 900px) {
+        .description .content img.n8Image {
+          width: 30%;
+          float: left;
+          display: inline;
+          margin-left: 80px;
+          margin-right: 80px; } }
+      @media only screen and (min-width: 1200px) {
+        .description .content img.n8Image {
+          margin-left: 100px; } }
+    .description .content h1 {
+      font-family: "Droid Serif", sans-serif;
+      font-size: 35px;
+      margin-top: 25px;
+      margin-bottom: 25px; }
+    .description .content p {
+      font-family: "Lato", sans-serif;
+      line-height: 1.5;
+      font-size: 20px;
+      font-weight: lighter; }
+      .description .content p span {
+        font-weight: bold;
+        font-style: italic; }
+      @media only screen and (min-width: 900px) {
+        .description .content p {
+          width: 50%;
+          float: left;
+          display: inline;
+          font-size: 18px; } }
+
+/* Portfolio
+=========================== */
+section.portfolio {
+  height: 2430px;
+  background-color: #f0f5f7; }
+  @media only screen and (min-width: 410px) {
+    section.portfolio {
+      height: 2700px; } }
+  @media only screen and (min-width: 480px) {
+    section.portfolio {
+      height: 2970px; } }
+  @media only screen and (min-width: 535px) {
+    section.portfolio {
+      height: 3060px; } }
+  @media only screen and (min-width: 540px) {
+    section.portfolio {
+      height: 1350px; } }
+  @media only screen and (min-width: 700px) {
+    section.portfolio {
+      height: 1890px; } }
+  @media only screen and (min-width: 1069px) {
+    section.portfolio {
+      height: 1260px; } }
+  @media only screen and (min-width: 1280px) {
+    section.portfolio {
+      height: 900px; } }
+  section.portfolio .portfolioHeader {
+    font-size: 35px;
+    font-family: "Droid Serif", sans-serif;
+    color: rgba(44, 62, 80, 0.9);
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    margin: auto;
+    width: 100%;
+    height: 100px; }
+  section.portfolio #js-grid-awesome-work {
+    margin-top: 50px;
+    width: 95%; }
+  section.portfolio .cbp-l-grid-mosaic .cbp-caption-activeWrap {
+    background-color: rgba(4, 4, 4, 0.7); }
+  section.portfolio .cbp-l-grid-mosaic .cbp-l-caption-title {
+    color: whitesmoke; }
+  section.portfolio .cbp-l-grid-mosaic .cbp-l-caption-desc {
+    color: whitesmoke;
+    opacity: 0.85; }
+
+/* Contact
+===========================*/
+.contact {
+  height: 600px;
+  background-image: url("../img/getintouch-mod1.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative; }
+  .contact .content {
+    height: 350px;
+    width: 350px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 5px; }
+    .contact .content h1 {
+      text-align: center;
+      padding: 32px;
+      font-family: "Droid Serif", sans-serif;
+      font-size: 35px; }
+    .contact .content p {
+      font-size: 22px;
+      text-align: center;
+      padding: 24px; }
+      .contact .content p a {
+        text-decoration: none;
+        color: #af1538;
+        opacity: 0.8;
+        transition: all 100ms; }
+        .contact .content p a:hover {
+          color: #811029;
+          opacity: 1; }
+
+/* Social
+===========================*/
+.social {
+  height: 225px;
+  background-color: #f0f5f7; }
+  .social ul {
+    font-family: 'fontello';
+    font-size: 44.625px;
+    width: 100%;
+    margin: auto;
+    padding-top: 50px; }
+    .social ul a {
+      text-decoration: none;
+      color: #883c4d;
+      mix-blend-mode: multiply;
+      transition: all 300ms; }
+      .social ul a:hover {
+        padding: 0 5px;
+        opacity: 0.6; }
+  .social .madeWLove {
+    text-align: center;
+    width: 200px;
+    font-family: "Lato", sans-serif;
+    color: rgba(44, 62, 80, 0.9);
+    padding-top: 20px;
+    font-size: 20px;
+    margin: auto; }
+
+/*# sourceMappingURL=main.css.map */
