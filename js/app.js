@@ -1,5 +1,6 @@
-$(function(){
-	
+// $(function(){
+
+
 // init cubeportfolio
      $('#js-grid-awesome-work').cubeportfolio({
         filters: '#js-filters-grid-awesome-work',
@@ -32,5 +33,4 @@ $(function(){
 
 
 
-
-}); //End ready
+// }); //End ready

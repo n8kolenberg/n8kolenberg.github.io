@@ -7,7 +7,6 @@
 	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/css-fontello/fontello.css">
 	<link rel="stylesheet" href="js/cubeportfolio/css/cubeportfolio.min.css">
-	<link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/main.css">
 	<link href="img/favicon.png" rel="shortcut icon" type="image/x-icon">
 </head>
@@ -15,8 +14,17 @@
 <body>
 
 <!-- Main Header -->
-	<section class="intro container-fluid">
+	<section class="intro container-fluid" id="home">
 		<div class="content row">
+			<div id="nav">
+				<h2>Nathaniel Kolenberg</h2>
+				<ul>
+					<li><a href="#home">Home</a></li>
+					<li><a href="#profile">Profile</a></li>
+					<li><a href="#n8portfolio">Portfolio</a></li>
+					<li><a href="#n8contact">Contact</a></li>
+				</ul>
+			</div>
 			<div class="diamond">
 				<h2 class="masthead text-center">Hi, I'm N8</h2> <br>
 				<h3 class="masthead-intro text-center">I'm a Front End Web Developer</h3>
@@ -25,7 +33,7 @@
 	</section>	
 
 <!-- Introduction -->
-	<section class="description container-fluid">
+	<section class="description container-fluid" id="profile">
 		<div class="content row ">
 			<h1 class="text-center">Meet N8</h1>
             <img src="img/n8.jpg" class="n8Image" alt="Image of N8">
@@ -38,7 +46,7 @@
 	</section>
 	
 <!-- Portfolio with cubeportfolio.js plugin -->
-	<section class="portfolio">
+	<section class="portfolio" id="n8portfolio">
         <div class="portfolioHeader">My Portfolio</div>
           <div id="js-grid-awesome-work" class="cbp cbp-l-grid-work cbp-caption-active cbp-caption-zoom cbp-ready" style="height: 1068px;">
 
@@ -190,7 +198,7 @@
 	</section>
 
 <!-- Contact Details -->
-	<section class="contact container-fluid">
+	<section class="contact container-fluid" id="n8contact">
 		<div class="content row col-xs-6 col-xs-offset-6 col-sm-6 col-sm-offset-6 col-md-offset-2 col-md-6">
 			<h1 class="text-center"> Get in touch </h1>
 				<p class="text-center"> Email address: <a href="mailto: nkolenberg@gmail.com">nkolenberg@gmail.com</a>
@@ -227,6 +235,7 @@
 					</a>
 				</li>
 			</ul>
+			<h5 id="imgCredit">Cover image by <a href="http://www.unsplash.com" target="_blank">Unsplash</a></h5>
 		</div> 
 	</section>
 
