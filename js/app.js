@@ -1,16 +1,5 @@
 $(function(){
 
-$('img.n8Image').hover(function(){
-    var $this = $(this);
-    $this.fadeOut("fast", function(){
-        $this.attr("src", "img/snown8.jpg").fadeIn("fast");
-    });
-}, function(){
-    var $this = $(this);
-    $this.fadeOut("fast", function(){
-        $this.attr("src", "img/n8.jpg").fadeIn("fast");
-    });
-}); // End hover
 
 // init cubeportfolio
      $('#js-grid-awesome-work').cubeportfolio({
