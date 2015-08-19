@@ -13,15 +13,14 @@ body {
 
 /* Introduction
 ===========================*/
-#nav {
+nav#nav {
   display: none; }
   @media only screen and (min-width: 1147px) {
-    #nav {
+    nav#nav {
+      z-index: 1;
       display: block;
-      position: relative;
       width: 100%;
       height: 40px;
-      z-index: 99999;
       text-align: center;
       display: flex;
       display: -webkit-flex;
@@ -30,19 +29,19 @@ body {
       justify-content: space-between;
       -webkit-justify-content: space-between;
       background-color: rgba(246, 246, 246, 0.5); }
-      #nav h2 {
+      nav#nav h2 {
         position: absolute;
         left: 40px;
         top: -10px;
         padding-left: 40px;
         font-size: 20px; }
-      #nav ul {
+      nav#nav ul {
         position: absolute;
         right: 20px;
         top: -20px;
         padding-top: 30px;
         text-align: center; }
-        #nav ul li {
+        nav#nav ul li {
           display: inline;
           padding: 20px;
           list-style: none;
@@ -51,8 +50,8 @@ body {
 .intro {
   height: 650px;
   opacity: 0.9;
-  background: linear-gradient(to bottom, transparent 50%, whitesmoke 100%), url("../img/mountains.jpeg");
-  background: -webkit-linear-gradient(to bottom, transparent 50%, whitesmoke 100%), url("../img/mountains.jpeg");
+  background: linear-gradient(to bottom, transparent 40%, #fafafa 90%), url("../img/mountains.jpeg");
+  background: -webkit-linear-gradient(to bottom, transparent 40%, #fafafa 90%), url("../img/mountains.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -119,7 +118,7 @@ body {
       text-align: center;
       margin: auto;
       border-radius: 5px;
-      box-shadow: 1px 1px 1px rgba(44, 62, 80, 0.9);
+      box-shadow: 0 0 2px rgba(44, 62, 80, 0.9);
       margin-top: 10px;
       margin-bottom: 20px; }
       @media only screen and (min-width: 900px) {
@@ -202,16 +201,16 @@ section.portfolio {
 /* Contact
 ===========================*/
 .contact {
-  z-index: -1;
   height: 600px;
-  background-image: url("../img/getintouch-mod1.jpeg");
+  background-image: url("../img/getintouch.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  position: relative; }
+  position: relative;
+  z-index: 0; }
   .contact .content {
-    height: 350px;
-    width: 350px;
+    height: 280px;
+    width: 280px;
     margin: auto;
     position: absolute;
     top: 0;
@@ -222,11 +221,12 @@ section.portfolio {
     border-radius: 50%; }
     .contact .content h1 {
       text-align: center;
-      padding: 20px;
-      padding-top: 25px;
+      padding-top: 40px;
+      padding-bottom: 28px;
       font-family: "Droid Serif", sans-serif;
       font-size: 35px; }
     .contact .content p {
+      display: inline;
       font-size: 20px;
       text-align: center;
       padding: 16px; }
@@ -239,6 +239,10 @@ section.portfolio {
           color: #811029;
           opacity: 1; }
 
+.icon-paper-plane-empty, .icon-phone-outline {
+  font-size: 48.125px;
+  margin-left: 17px; }
+
 /* Social
 ===========================*/
 .social {
@@ -249,7 +253,7 @@ section.portfolio {
     font-size: 44.625px;
     width: 100%;
     margin: auto;
-    padding-top: 40px;
+    padding-top: 20px;
     padding-bottom: 20px; }
     .social ul a {
       text-decoration: none;
@@ -276,26 +280,28 @@ section.portfolio {
     font-size: 15px;
     margin: auto; }
   .social #imgCredit {
-    font-size: 15px; }
+    font-size: 15px;
+    height: 20px;
+    padding-top: 10px;
+    padding-bottom: 0; }
     .social #imgCredit a {
       display: inline;
       text-decoration: none; }
 
 /* Navigation arrows
 ===========================*/
-.icon-down-open, .icon-up-open {
+.icon-angle-down, .icon-angle-up {
   position: absolute;
-  top: 92%;
+  top: 78%;
   left: 50%;
-  font-size: 25px;
+  font-size: 45.5px;
   color: rgba(80, 113, 146, 0.9);
   transition: all 100ms; }
-  .icon-down-open:hover, .icon-up-open:hover {
+  .icon-angle-down:hover, .icon-angle-up:hover {
     color: rgba(138, 164, 190, 0.9); }
 
-.icon-up-open {
+.icon-angle-up {
   position: relative;
-  bottom: -5px;
   left: 48.5%;
   text-align: center; }
 

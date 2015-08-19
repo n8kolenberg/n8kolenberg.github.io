@@ -1,22 +1,16 @@
-// $(function(){
+$(function(){
 
-
-$('#nav').on('sticky-start', function() {
-  $(this).css({
-    "background-color": "rgba(246, 246, 246, 0.95)",
-    "z-index": 100
-  });
-}) //End on sticky-start
-.on('sticky-end', function() {
-    $(this).css({
-        "background-color": "rgba(246, 246, 246, 0.5)"
+$('img.n8Image').hover(function(){
+    var $this = $(this);
+    $this.fadeOut("fast", function(){
+        $this.attr("src", "img/snown8.jpg").fadeIn("fast");
     });
-}); //End on sticky-end
-
-
-$('#nav').sticky();
-
-
+}, function(){
+    var $this = $(this);
+    $this.fadeOut("fast", function(){
+        $this.attr("src", "img/n8.jpg").fadeIn("fast");
+    });
+}); // End hover
 
 // init cubeportfolio
      $('#js-grid-awesome-work').cubeportfolio({
@@ -48,7 +42,7 @@ $('#nav').sticky();
         displayTypeSpeed: 100,
     });
 
-        $(document).on("click", "#nav li a, .icon-down-open, .icon-up-open", function(event){        
+        $(document).on("click", "#nav li a, .icon-angle-down, .icon-angle-up", function(event){        
             event.preventDefault();
         
             //This should set the variable "page" as either #home, #profile, #portfolio, or #contact:
@@ -69,4 +63,4 @@ $('#nav').sticky();
     }); // End on click
 
 
-// }); //End ready
+}); //End ready
