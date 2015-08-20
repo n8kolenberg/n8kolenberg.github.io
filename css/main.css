@@ -13,45 +13,11 @@ body {
 
 /* Introduction
 ===========================*/
-nav#nav {
-  display: none; }
-  @media only screen and (min-width: 1147px) {
-    nav#nav {
-      z-index: 1;
-      display: block;
-      width: 100%;
-      height: 40px;
-      text-align: center;
-      display: flex;
-      display: -webkit-flex;
-      flex-direction: row;
-      -webkit-flex-direction: row;
-      justify-content: space-between;
-      -webkit-justify-content: space-between;
-      background-color: rgba(246, 246, 246, 0.5); }
-      nav#nav h2 {
-        position: absolute;
-        left: 40px;
-        top: -10px;
-        padding-left: 40px;
-        font-size: 20px; }
-      nav#nav ul {
-        position: absolute;
-        right: 20px;
-        top: -20px;
-        padding-top: 30px;
-        text-align: center; }
-        nav#nav ul li {
-          display: inline;
-          padding: 20px;
-          list-style: none;
-          font-size: 16px; } }
-
 .intro {
-  height: 650px;
+  height: 780px;
   opacity: 0.9;
-  background: linear-gradient(to bottom, transparent 40%, #fafafa 90%), url("../img/mountains.jpeg");
-  background: -webkit-linear-gradient(to bottom, transparent 40%, #fafafa 90%), url("../img/mountains.jpeg");
+  background: linear-gradient(to bottom, rgba(234, 171, 172, 0.5) 40%, rgba(255, 255, 255, 0.5) 80%), url("../img/london-mod2.jpg");
+  background: -webkit-linear-gradient(to bottom, rgba(234, 171, 172, 0.5) 40%, rgba(255, 255, 255, 0.5) 80%), url("../img/london-mod2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -64,44 +30,39 @@ nav#nav {
   left: 0;
   right: 0;
   bottom: 100px;
-  background-color: transparent;
-  width: 90%;
-  height: 150px;
+  background-color: rgba(216, 224, 249, 0.75);
+  border-radius: 10px;
+  opacity: 0.8;
+  width: 80%;
+  height: 175px;
   margin: auto; }
+  @media only screen and (min-width: 500px) {
+    .diamond {
+      width: 70%;
+      max-width: 475px;
+      height: 150px; } }
   .diamond .masthead, .diamond .masthead-intro {
-    color: rgba(246, 246, 246, 0.9);
-    text-shadow: rgba(44, 62, 80, 0.9) 5px 5px 1px;
+    color: rgba(96, 3, 55, 0.9);
     margin: auto;
-    font-family: "Droid Serif", sans-serif;
-    font-weight: bold;
+    margin-top: 10px;
+    font-family: "Oswald", sans-serif;
+    /*font-weight: bold;*/
     font-size: 40px; }
     @media only screen and (min-width: 418px) {
       .diamond .masthead, .diamond .masthead-intro {
         font-size: 44px; } }
   .diamond .masthead-intro {
-    font-size: 34px; }
+    font-size: 28px; }
+    @media only screen and (min-width: 600px) {
+      .diamond .masthead-intro {
+        font-size: 32px; } }
 
 /* Description
 ===========================*/
 .description {
-  height: 1440px;
-  background-color: #fafafa;
+  height: 100%;
+  background-color: #e3e7fa;
   margin: auto; }
-  @media only screen and (min-width: 500px) {
-    .description {
-      height: 1260px; } }
-  @media only screen and (min-width: 650px) {
-    .description {
-      height: 1080px; } }
-  @media only screen and (min-width: 900px) {
-    .description {
-      height: 810px; } }
-  @media only screen and (min-width: 1000px) {
-    .description {
-      height: 720px; } }
-  @media only screen and (min-width: 1200px) {
-    .description {
-      height: 630px; } }
   .description .content {
     width: 90%;
     max-width: 900px;
@@ -132,18 +93,21 @@ nav#nav {
         .description .content img.n8Image {
           margin-left: 100px; } }
     .description .content h1 {
-      font-family: "Droid Serif", sans-serif;
+      font-family: "Oswald", sans-serif;
       font-size: 35px;
       margin-top: 25px;
-      margin-bottom: 25px; }
+      margin-bottom: 25px;
+      color: #ac405f; }
     .description .content p {
       font-family: "Lato", sans-serif;
       line-height: 1.5;
       font-size: 20px;
-      font-weight: lighter; }
+      font-weight: lighter;
+      color: #3a4854; }
       .description .content p span {
         font-weight: bold;
-        font-style: italic; }
+        font-style: italic;
+        color: #89043d; }
       @media only screen and (min-width: 900px) {
         .description .content p {
           width: 50%;
@@ -155,7 +119,7 @@ nav#nav {
 =========================== */
 section.portfolio {
   height: 2430px;
-  background-color: #f0f5f7; }
+  background-color: #92637e; }
   @media only screen and (min-width: 410px) {
     section.portfolio {
       height: 2700px; } }
@@ -179,8 +143,8 @@ section.portfolio {
       height: 900px; } }
   section.portfolio .portfolioHeader {
     font-size: 35px;
-    font-family: "Droid Serif", sans-serif;
-    color: rgba(44, 62, 80, 0.9);
+    font-family: "Oswald", sans-serif;
+    color: #e3e3e3;
     text-align: center;
     padding-top: 50px;
     padding-bottom: 30px;
@@ -223,7 +187,7 @@ section.portfolio {
       text-align: center;
       padding-top: 40px;
       padding-bottom: 28px;
-      font-family: "Droid Serif", sans-serif;
+      font-family: "Oswald", sans-serif;
       font-size: 35px; }
     .contact .content p {
       display: inline;
@@ -246,7 +210,7 @@ section.portfolio {
 /* Social
 ===========================*/
 .social {
-  height: 225px;
+  height: 180px;
   background-color: #f0f5f7; }
   .social ul {
     font-family: 'fontello';
@@ -266,16 +230,16 @@ section.portfolio {
       .social ul a .icon-linkedin {
         color: #1783b9; }
       .social ul a .icon-github {
-        color: #2b2b2b; }
+        color: rgba(61, 60, 87, 0.9); }
       .social ul a .icon-instagram {
         color: #815441; }
       .social ul a .icon-slack {
-        color: #4d394b; }
+        color: rgba(107, 95, 187, 0.9); }
   .social .madeWLove, .social #imgCredit {
     text-align: center;
     width: 300px;
     font-family: "Lato", sans-serif;
-    color: rgba(44, 62, 80, 0.9);
+    color: #4f6272;
     padding-top: 20px;
     font-size: 15px;
     margin: auto; }
@@ -286,23 +250,19 @@ section.portfolio {
     padding-bottom: 0; }
     .social #imgCredit a {
       display: inline;
-      text-decoration: none; }
+      text-decoration: none;
+      color: #ef2d56; }
+      .social #imgCredit a:hover {
+        color: #993955; }
 
 /* Navigation arrows
 ===========================*/
-.icon-angle-down, .icon-angle-up {
-  position: absolute;
-  top: 78%;
-  left: 50%;
-  font-size: 45.5px;
-  color: rgba(80, 113, 146, 0.9);
-  transition: all 100ms; }
-  .icon-angle-down:hover, .icon-angle-up:hover {
-    color: rgba(138, 164, 190, 0.9); }
-
-.icon-angle-up {
-  position: relative;
-  left: 48.5%;
-  text-align: center; }
+#fp-nav ul li .fp-tooltip {
+  color: #c43356;
+  font-weight: bold;
+  font-size: larger; }
+#fp-nav ul li a span {
+  background-color: #3a4854;
+  font-size: larger; }
 
 /*# sourceMappingURL=main.css.map */

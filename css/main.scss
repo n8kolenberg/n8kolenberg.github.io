@@ -1,6 +1,6 @@
 /* Main Variables */
 $primaryFont : "Lato", sans-serif;
-$secondaryFont : "Droid Serif", sans-serif;
+$secondaryFont : "Oswald", sans-serif;
 $primary-color: rgba(44, 62, 80, 0.9);
 $secondary-color: rgba(175, 21, 56, 1);
 $primary-bgColor: #FAFAFA;
@@ -8,6 +8,17 @@ $secondary-bgColor: rgba(240, 245, 247, 1);
 $primarySectionHeight: 900px;
 $headerFontSize: 35px;
 $pFontSize: 20px;
+
+$headerColor1: rgba(224, 130, 131, 0.5);
+$headerColor2: rgba(228, 241, 254, 0.5);
+
+$softRed: rgba(153, 57, 85, 100);
+$brightRed: rgba(239, 45, 86, 100);
+$darkGrey: rgba(79, 98, 114, 100);
+$lightPurple: rgba(183, 195, 243, 100);
+$darkPurple: rgba(35, 2, 46, 0.8);
+$lightGrey: rgba(227, 227, 227, 1);
+$magenta: rgba(137, 4, 61, 100);
 
 $primaryPadding: 20px;
 
@@ -37,55 +48,12 @@ body {
 
 /* Introduction
 ===========================*/
-nav#nav {
-	display: none;
-	@media only screen and (min-width: 1147px) {
-		z-index: 1;
-		display: block;
-		width: 100%;
-		height: 40px;
-		text-align: center;
-		display: flex;
-		display: -webkit-flex;
-		flex-direction: row;
-		-webkit-flex-direction: row;
-		justify-content: space-between;
-		-webkit-justify-content: space-between;
-		background-color: rgba(246, 246, 246, 0.5);
-
-
-		h2 {
-			position: absolute;
-			left: 40px;
-			top: -10px;
-			padding-left: $primaryPadding * 2;
-			font-size: $primaryPadding;
-		}
-
-		ul {
-			position: absolute;
-			right: 20px;
-			top: -20px;
-			padding-top: $primaryPadding * 1.5;
-			text-align: center;
-
-			li {
-				display: inline;
-				padding: $primaryPadding;
-				list-style: none;
-				font-size: $primaryPadding * 0.8;
-			}
-		}
-	}
-		
-}
-
 
 .intro {
-	height: $primarySectionHeight - 250px;
+	height: $primarySectionHeight - 120px;
 	opacity: 0.9;
-	background: linear-gradient(to bottom, transparent 40%, complement($primary-bgColor) 90%), url('../img/mountains.jpeg');
-	background: -webkit-linear-gradient(to bottom, transparent 40%, complement($primary-bgColor) 90%), url('../img/mountains.jpeg');
+	background: linear-gradient(to bottom, lighten($headerColor1, 10%) 40%, lighten($headerColor2, 10%) 80%), url('../img/london-mod2.jpg');
+	background: -webkit-linear-gradient(to bottom, lighten($headerColor1, 10%) 40%, lighten($headerColor2, 10%) 80%), url('../img/london-mod2.jpg');
     @include bgImageProps;
     background-blend-mode: screen;
     position: relative;
@@ -99,17 +67,24 @@ nav#nav {
 	left: 0;
 	right: 0;
 	bottom: 100px;
-	background-color: transparent;
-	width: 90%;
-	height: 150px;
+	background-color: lighten(mix($lightPurple, $headerColor2), 5%);
+	border-radius: 10px;
+	opacity: 0.8;
+	width: 80%;
+	height: 175px;
 	margin: auto;
+	@media only screen and (min-width: 500px) {
+	    	width: 70%;
+	    	max-width: 475px;
+	    	height: 150px;
+	    }
 
 	.masthead {
-	    color: rgba(246, 246, 246, 0.9);
-	    text-shadow: $primary-color 05px 5px 1px;
+	    color: mix($darkPurple, $magenta);
 	    margin: auto;
+	    margin-top: 10px;
 	    font-family: $secondaryFont;
-	    font-weight: bold;
+	    /*font-weight: bold;*/
 	    font-size: $primaryPadding * 2;
 	    
 	    @media only screen and (min-width: 418px) {
@@ -117,10 +92,13 @@ nav#nav {
 	    }
 	}   
 
-	    .masthead-intro {
-	    	@extend .masthead;
-	    	font-size: $primaryPadding * 1.7;
+    .masthead-intro {
+    	@extend .masthead;
+    	font-size: $primaryPadding * 1.4;
+    	@media only screen and (min-width: 600px) {
+	    	font-size: $primaryPadding * 1.6;
 	    }
+    }
 }
 
 
@@ -128,24 +106,9 @@ nav#nav {
 ===========================*/
 
 .description {
-	height: $primarySectionHeight * 1.6;
-	background-color: complement($primary-bgColor);
-	margin: auto;
-	@media only screen and (min-width: 500px) {
-			height: $primarySectionHeight * 1.4;
-		}
-	@media only screen and (min-width: 650px) {
-			height: $primarySectionHeight * 1.2;
-		}
-	@media only screen and (min-width: 900px) {
-			height: $primarySectionHeight * 0.9;
-		}
-	@media only screen and (min-width: 1000px) {
-			height: $primarySectionHeight * 0.8;
-		}
-	@media only screen and (min-width: 1200px) {
-			height: $primarySectionHeight * 0.7;
-		}					
+	height: 100%;
+	background-color: lighten($lightPurple, 10%);
+	margin: auto;		
 	.content {
 		width: 90%;
 		max-width: 900px;
@@ -183,6 +146,7 @@ nav#nav {
 			font-size: $headerFontSize;
 			margin-top: 25px;
 			margin-bottom: 25px;
+			color: lighten($softRed, 5%);
 		}
 
 		p {
@@ -190,9 +154,11 @@ nav#nav {
 			line-height: 1.5;
 			font-size: $pFontSize;
 			font-weight: lighter;
+			color: darken($darkGrey, 10%);
 			span {
 				font-weight: bold;
 				font-style: italic;
+				color: $magenta;
 			}
 			@media only screen and (min-width: 900px) {
 				width: 50%;
@@ -208,7 +174,7 @@ nav#nav {
 =========================== */
 section.portfolio {
 	height: $primarySectionHeight * 2.7;
-	background-color: $secondary-bgColor;
+	background-color: lighten(mix($softRed, $darkGrey), 10%);
 	@media only screen and (min-width: 410px) {
 		height: $primarySectionHeight * 3;
 	}
@@ -234,7 +200,7 @@ section.portfolio {
 	.portfolioHeader {
 		font-size: $headerFontSize;
 		font-family: $secondaryFont;
-		color: $primary-color;
+		color: $lightGrey;
 		text-align: center;
 		padding-top: $primaryPadding * 2.5;
 		padding-bottom: $primaryPadding * 1.5;
@@ -324,7 +290,7 @@ section.portfolio {
 ===========================*/
 
 .social {
-	height: $primarySectionHeight * 0.25;
+	height: $primarySectionHeight * 0.2;
 	background-color: rgba(240, 245, 247, 1);
 	
 	ul {
@@ -349,13 +315,13 @@ section.portfolio {
 				color: rgba(23, 131, 185, 1);
 			}
 			.icon-github {
-				color: rgba(43, 43, 43, 1);
+				color: mix($darkPurple, $darkGrey);
 			}
 			.icon-instagram {
 				color: rgba(129, 84, 65, 1);
 			}
 			.icon-slack {
-				color: rgba(77, 57, 75, 1);
+				color: saturate(mix($lightPurple, $darkPurple), 20%);
 			}
 
 		}
@@ -365,7 +331,7 @@ section.portfolio {
 	    text-align: center;
 		width: 300px;
 		font-family: $primaryFont;
-		color: $primary-color;
+		color: $darkGrey;
 		padding-top: $primaryPadding;
 		font-size: $primaryPadding - 5px;
 		margin: auto;
@@ -381,6 +347,10 @@ section.portfolio {
 		a {
 			display: inline;
 			text-decoration: none;
+			color: $brightRed;
+			 &:hover {
+				color: $softRed;
+			}
 		}
 	}
 }
@@ -389,29 +359,19 @@ section.portfolio {
 
 /* Navigation arrows
 ===========================*/
-.icon-angle-down{
-	position: absolute;
-	top: 78%;
-	left: 50%;
-	font-size: $headerFontSize * 1.3;
-	color: lighten($primary-color, 20%);
-	transition: all 100ms;
-	&:hover {
-		color: lighten($primary-color, 40%);
+
+#fp-nav ul li {
+	.fp-tooltip {
+		color: mix($brightRed, $softRed);
+		font-weight: bold;
+		font-size: larger;
+	}
+
+	a span {
+		background-color: darken($darkGrey, 10%);
+		font-size: larger;
 	}
 }
-
-.icon-angle-up {
-	@extend .icon-angle-down;
-	position: relative;
-	left: 48.5%;
-	text-align: center;	
-}
-
-
-
-
-
 
 
 

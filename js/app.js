@@ -1,7 +1,20 @@
 $(function(){
 
 
-// init cubeportfolio
+//Initialise Fullpage.js
+$('#fullpage').fullpage({
+    //Navigation
+    navigationTooltips: ['Home', 'Profile', 'Portfolio', 'Contact'],
+    navigation: true,
+    navigationPosition: 'right',
+
+    //Scrolling
+    autoScrolling: false
+
+}); // End fullpage init
+
+
+// initialise cubeportfolio
      $('#js-grid-awesome-work').cubeportfolio({
         filters: '#js-filters-grid-awesome-work',
         loadMore: '#js-loadMore-awesomeWork',
