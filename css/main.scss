@@ -175,7 +175,6 @@ body {
 		}
 	}
 
-
 	.skillSet {
 		display: none;
 		@media only screen and (min-width: 550px) {
@@ -186,7 +185,7 @@ body {
 
 			.skillsHeader {
 				font: $primaryFont;
-				font-size: 30px;
+				font-size: $primaryPadding * 1.025;
 				color: lighten($softRed, 5%);
 				display: block;
 				clear: left;
@@ -225,6 +224,7 @@ body {
 			width: 100%;
 			margin-top: 10px;
 			.skillsHeader {
+				font-size: $primaryPadding * 1.2;
 				text-align: center;
 			}
 
