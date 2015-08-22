@@ -46,11 +46,17 @@ body {
 }
 
 
+@fontface {
+	font-family: fontello;
+	src: url('font/code.woff');
+}
+
+
 /* Introduction
 ===========================*/
 
 .intro {
-	height: $primarySectionHeight - 120px;
+	height: $primarySectionHeight - 100px;
 	opacity: 0.9;
 	background: linear-gradient(to bottom, lighten($headerColor1, 10%) 40%, lighten($headerColor2, 10%) 80%), url('../img/london-mod2.jpg');
 	background: -webkit-linear-gradient(to bottom, lighten($headerColor1, 10%) 40%, lighten($headerColor2, 10%) 80%), url('../img/london-mod2.jpg');
@@ -108,7 +114,7 @@ body {
 .description {
 	height: 100%;
 	background-color: lighten($lightPurple, 10%);
-	margin: auto;		
+	margin: auto;	
 	.content {
 		width: 90%;
 		max-width: 900px;
@@ -168,7 +174,69 @@ body {
 			}
 		}
 	}
+
+
+	.skillSet {
+		display: none;
+		@media only screen and (min-width: 550px) {
+			display: block;
+			padding: 40px;
+			width: 90%;
+			margin-top: -50px;
+
+			.skillsHeader {
+				font: $primaryFont;
+				font-size: 30px;
+				color: lighten($softRed, 5%);
+				display: block;
+				clear: left;
+				text-align: left;
+			}
+
+			.skills {
+				clear: both;
+				height: 30px;
+				display: block;
+				text-align: left;
+				span {
+					display: inline-block;
+					text-align: left;
+					font-size: $primaryPadding;
+					color: $brightRed;
+				}
+
+				p.skillDescr {
+					display: inline-block;
+					font-size: $primaryPadding - 5px;
+					margin-left: $primaryPadding / 2;
+					text-align: left;
+				}
+			}
+		}
+
+		@media only screen and (min-width: 900px) {
+			text-align: center;
+			.skillsHeader, .skills {
+				margin-left: 70px;
+			}
+		}
+
+		@media only screen and (min-width: 1290px) {
+			width: 100%;
+			margin-top: 10px;
+			.skillsHeader {
+				text-align: center;
+			}
+
+			.skills {
+				display: inline;
+				margin: 10px;
+			}
+		}
+	}
 }
+
+
 
 /* Portfolio
 =========================== */
@@ -232,7 +300,7 @@ section.portfolio {
 /* Contact
 ===========================*/
 .contact {
-	height: $primarySectionHeight - 300px;
+	height: $primarySectionHeight - 250px;
 	background-image: url('../img/getintouch.jpg');
 	@include bgImageProps;
 	position: relative;
