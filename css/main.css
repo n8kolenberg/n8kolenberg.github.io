@@ -218,8 +218,7 @@ section.portfolio {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  position: relative;
-  z-index: 0; }
+  position: relative; }
   .contact .content {
     height: 280px;
     width: 280px;
@@ -236,7 +235,8 @@ section.portfolio {
       padding-top: 40px;
       padding-bottom: 28px;
       font-family: "Oswald", sans-serif;
-      font-size: 35px; }
+      font-size: 35px;
+      color: #4f6272; }
     .contact .content p {
       display: inline;
       font-size: 20px;
