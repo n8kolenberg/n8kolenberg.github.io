@@ -113,6 +113,11 @@ body {
         font-weight: bold;
         font-style: italic;
         color: #89043d; }
+      .description .content p a {
+        color: #a20548;
+        font-weight: bold; }
+        .description .content p a:hover {
+          color: #ef2d56; }
       @media only screen and (min-width: 900px) {
         .description .content p {
           width: 50%;
