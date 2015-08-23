@@ -74,32 +74,34 @@ body {
 	right: 0;
 	bottom: 100px;
 	background-color: lighten(mix($lightPurple, $headerColor2), 5%);
-	border-radius: 10px;
+	border-radius: 50%;
 	opacity: 0.8;
-	width: 80%;
-	height: 175px;
+	width: 300px;
+	height: 300px;
 	margin: auto;
 	@media only screen and (min-width: 500px) {
-	    	width: 70%;
-	    	max-width: 475px;
-	    	height: 150px;
+	    	width: 350px;
+	    	height: 350px;
 	    }
 
 	.masthead {
 	    color: mix($darkPurple, $magenta);
 	    margin: auto;
-	    margin-top: 10px;
+	    margin-top: 105px;
 	    font-family: $secondaryFont;
-	    /*font-weight: bold;*/
 	    font-size: $primaryPadding * 2;
 	    
 	    @media only screen and (min-width: 418px) {
 	    	font-size: $primaryPadding * 2.2;
 	    }
+	    @media only screen and (min-width: 500px) {
+	    	margin-top: 115px;
+	    }
 	}   
 
     .masthead-intro {
     	@extend .masthead;
+    	margin-top: 10px;
     	font-size: $primaryPadding * 1.4;
     	@media only screen and (min-width: 600px) {
 	    	font-size: $primaryPadding * 1.6;
@@ -131,7 +133,7 @@ body {
 			max-width: 300px;
 			text-align: center;
 			margin: auto;
-			border-radius: 5px;
+			border-radius: 20px;
 			box-shadow: 0 0 2px $primary-color;
 			margin-top: $primaryPadding / 2;
 			margin-bottom: $primaryPadding;
@@ -207,7 +209,7 @@ body {
 				p.skillDescr {
 					display: inline-block;
 					font-size: $primaryPadding - 5px;
-					margin-left: $primaryPadding / 2;
+					margin-left: $primaryPadding / 3;
 					text-align: left;
 				}
 			}
@@ -231,6 +233,7 @@ body {
 			.skills {
 				display: inline;
 				margin: 10px;
+				margin-left: 0;
 			}
 		}
 	}

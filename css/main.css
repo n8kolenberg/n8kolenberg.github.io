@@ -34,27 +34,29 @@ body {
   right: 0;
   bottom: 100px;
   background-color: rgba(216, 224, 249, 0.75);
-  border-radius: 10px;
+  border-radius: 50%;
   opacity: 0.8;
-  width: 80%;
-  height: 175px;
+  width: 300px;
+  height: 300px;
   margin: auto; }
   @media only screen and (min-width: 500px) {
     .diamond {
-      width: 70%;
-      max-width: 475px;
-      height: 150px; } }
+      width: 350px;
+      height: 350px; } }
   .diamond .masthead, .diamond .masthead-intro {
     color: rgba(96, 3, 55, 0.9);
     margin: auto;
-    margin-top: 10px;
+    margin-top: 105px;
     font-family: "Oswald", sans-serif;
-    /*font-weight: bold;*/
     font-size: 40px; }
     @media only screen and (min-width: 418px) {
       .diamond .masthead, .diamond .masthead-intro {
         font-size: 44px; } }
+    @media only screen and (min-width: 500px) {
+      .diamond .masthead, .diamond .masthead-intro {
+        margin-top: 115px; } }
   .diamond .masthead-intro {
+    margin-top: 10px;
     font-size: 28px; }
     @media only screen and (min-width: 600px) {
       .diamond .masthead-intro {
@@ -81,7 +83,7 @@ body {
       max-width: 300px;
       text-align: center;
       margin: auto;
-      border-radius: 5px;
+      border-radius: 20px;
       box-shadow: 0 0 2px rgba(44, 62, 80, 0.9);
       margin-top: 10px;
       margin-bottom: 20px; }
@@ -145,7 +147,7 @@ body {
           .description .skillSet .skills p.skillDescr {
             display: inline-block;
             font-size: 15px;
-            margin-left: 10px;
+            margin-left: 6.66667px;
             text-align: left; } }
     @media only screen and (min-width: 900px) {
       .description .skillSet {
@@ -161,7 +163,8 @@ body {
           text-align: center; }
         .description .skillSet .skills {
           display: inline;
-          margin: 10px; } }
+          margin: 10px;
+          margin-left: 0; } }
 
 /* Portfolio
 =========================== */
