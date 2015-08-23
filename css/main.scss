@@ -56,7 +56,7 @@ body {
 ===========================*/
 
 .intro {
-	height: $primarySectionHeight - 100px;
+	height: $primarySectionHeight - 50px;
 	opacity: 0.9;
 	background: linear-gradient(to bottom, lighten($headerColor1, 10%) 40%, lighten($headerColor2, 10%) 80%), url('../img/london-mod2.jpg');
 	background: -webkit-linear-gradient(to bottom, lighten($headerColor1, 10%) 40%, lighten($headerColor2, 10%) 80%), url('../img/london-mod2.jpg');
