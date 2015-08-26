@@ -78,7 +78,7 @@ body {
       .description .content {
         max-width: 1200px;
         width: 100%; } }
-    .description .content img.n8Image {
+    .description .content img.n8Image, .description .content section.portfolio #portfolio-placeholder .portfolioElement a.n8Image, section.portfolio #portfolio-placeholder .portfolioElement .description .content a.n8Image {
       width: 95%;
       max-width: 300px;
       text-align: center;
@@ -88,14 +88,14 @@ body {
       margin-top: 10px;
       margin-bottom: 20px; }
       @media only screen and (min-width: 900px) {
-        .description .content img.n8Image {
+        .description .content img.n8Image, .description .content section.portfolio #portfolio-placeholder .portfolioElement a.n8Image, section.portfolio #portfolio-placeholder .portfolioElement .description .content a.n8Image {
           width: 30%;
           float: left;
           display: inline;
           margin-left: 80px;
           margin-right: 80px; } }
       @media only screen and (min-width: 1200px) {
-        .description .content img.n8Image {
+        .description .content img.n8Image, .description .content section.portfolio #portfolio-placeholder .portfolioElement a.n8Image, section.portfolio #portfolio-placeholder .portfolioElement .description .content a.n8Image {
           margin-left: 100px; } }
     .description .content h1 {
       font-family: "Oswald", sans-serif;
@@ -174,8 +174,29 @@ body {
 /* Portfolio
 =========================== */
 section.portfolio {
-  height: 2430px;
+  height: 3600px;
   background-color: #92637e;
+  /*	@media only screen and (min-width: 410px) {
+  		height: $primarySectionHeight * 3;
+  	}
+  	@media only screen and (min-width: 480px) {
+  		height: $primarySectionHeight * 3.3;
+  	}
+  	@media only screen and (min-width: 535px) {
+  		height: $primarySectionHeight * 3.4;
+  	}
+  	@media only screen and (min-width: 540px) {
+  		height: $primarySectionHeight * 1.5;
+  	}
+  	@media only screen and (min-width: 700px) {
+  		height: $primarySectionHeight * 2.1;
+  	}
+  	@media only screen and (min-width: 1067px) {
+  		height: $primarySectionHeight * 1.4;
+  	}
+  	@media only screen and (min-width: 1279px) {
+  		height: $primarySectionHeight;
+  	}*/
   /*	#js-grid-awesome-work {
   		margin-top: 50px;
   		width: 95%;
@@ -193,35 +214,15 @@ section.portfolio {
   		color: $portfolioTextColor;
   		opacity: 0.85;
   	}*/ }
-  @media only screen and (min-width: 410px) {
-    section.portfolio {
-      height: 2700px; } }
-  @media only screen and (min-width: 480px) {
-    section.portfolio {
-      height: 2970px; } }
-  @media only screen and (min-width: 535px) {
-    section.portfolio {
-      height: 3060px; } }
-  @media only screen and (min-width: 540px) {
-    section.portfolio {
-      height: 1350px; } }
-  @media only screen and (min-width: 700px) {
-    section.portfolio {
-      height: 1890px; } }
-  @media only screen and (min-width: 1067px) {
-    section.portfolio {
-      height: 1260px; } }
-  @media only screen and (min-width: 1279px) {
-    section.portfolio {
-      height: 900px; } }
   section.portfolio .portfolioHeader {
     font-size: 35px;
     font-family: "Oswald", sans-serif;
     color: #e3e3e3;
     text-align: center;
     padding-top: 50px;
-    padding-bottom: 30px;
+    padding-bottom: 32px;
     margin: auto;
+    margin-bottom: 30px;
     width: 100%;
     height: 100px; }
   section.portfolio #portfolio-placeholder {
@@ -231,11 +232,50 @@ section.portfolio {
     -webkit-flex-direction: column;
     justify-content: space-around;
     -webkit-justify-content: space-around;
-    height: 900px;
-    width: 500px; }
-    section.portfolio #portfolio-placeholder img {
-      width: 300px;
-      height: 250px; }
+    align-content: center;
+    -webkit-align-content: center;
+    width: 100%; }
+    @media only screen and (min-width: 410px) {
+      section.portfolio #portfolio-placeholder {
+        flex-direction: row;
+        -webkit-flex-direction: row;
+        flex-wrap: wrap;
+        -webkit-flex-wrap: wrap; } }
+    section.portfolio #portfolio-placeholder .portfolioElement {
+      width: 100%;
+      max-width: 400px;
+      height: 500px;
+      background-color: rgba(35, 2, 46, 0.8);
+      margin: auto;
+      margin-bottom: 20px;
+      display: block; }
+      section.portfolio #portfolio-placeholder .portfolioElement .pfTitle {
+        font-family: "Oswald", sans-serif;
+        font-size: 24px;
+        color: #e3e3e3;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 10px; }
+      section.portfolio #portfolio-placeholder .portfolioElement .pfDescr, section.portfolio #portfolio-placeholder .portfolioElement .pfLanguages {
+        margin-bottom: 20px;
+        text-align: justify;
+        color: #e3e3e3;
+        max-width: 350px;
+        font-size: 15px; }
+      section.portfolio #portfolio-placeholder .portfolioElement .pfLanguages {
+        text-align: center; }
+      section.portfolio #portfolio-placeholder .portfolioElement img, section.portfolio #portfolio-placeholder .portfolioElement a {
+        border: 1px black dotted;
+        display: block;
+        width: 325px;
+        margin: auto;
+        height: 250px; }
+      section.portfolio #portfolio-placeholder .portfolioElement ul {
+        display: inline-block; }
+        section.portfolio #portfolio-placeholder .portfolioElement ul li {
+          width: 90%;
+          margin: auto;
+          list-style: none; }
 
 /* Contact
 ===========================*/
