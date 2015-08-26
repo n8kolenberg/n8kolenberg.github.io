@@ -9,18 +9,19 @@ function PortfolioPiece (options) {
 
 // We need a function that loops through the array of portfolio objects
 // and appends it to the placeholder div for portfolio pieces
-function makePortfolioShow (portfolioArray) {
+function appendPortfolio (portfolioArray) {
     for (var i = 0; i < portfolioArray.length; i++) {
-       var html = "<a href= '" + portfolioArray[i].link + "'>";
+       var html = "<div class='portfolioElement'>";
+       html += "<a href= '" + portfolioArray[i].link + "' target='_blank'>";
        html += "<img src='" + portfolioArray[i].thumbnail + "' class='portfolioThumbNail'></a>";
-       html += "<ul class='portfolioDescr'>";
-       html += "<li>" + portfolioArray[i].title + "</li>";
-       html += "<li>" + portfolioArray[i].description + "</li>";
-       html += "<li>" + portfolioArray[i].languages + "</li>";
-       html += "</ul>";
+       html += "<ul>";
+       html += "<li class='pfTitle'>" + portfolioArray[i].title + "</li>";
+       html += "<li class='pfDescr'>" + portfolioArray[i].description + "</li>";
+       html += "<li class='pfLanguages'>" + portfolioArray[i].languages + "</li>";
+       html += "</ul> </div>";
        $('div#portfolio-placeholder').append(html); 
     }  
-}
+};
 
 
 var soundful = new PortfolioPiece({
@@ -100,7 +101,7 @@ $(function(){
 
     }); // End fullpage init
 
-    makePortfolioShow(portfolioArray);
+    appendPortfolio(portfolioArray);
 
 
 
