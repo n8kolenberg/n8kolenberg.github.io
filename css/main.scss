@@ -287,7 +287,23 @@ section.portfolio {
 		height: 100px;
 	}
 
-	#js-grid-awesome-work {
+	#portfolio-placeholder {
+		display: flex;
+		display: -webkit-flex;
+		flex-direction: column;
+		-webkit-flex-direction: column;
+		justify-content: space-around;
+		-webkit-justify-content: space-around;
+
+		height: $primarySectionHeight;
+		width: 500px;
+		img {
+			width: 300px;
+			height: 250px;
+		}
+	}
+
+/*	#js-grid-awesome-work {
 		margin-top: 50px;
 		width: 95%;
 	}
@@ -303,7 +319,7 @@ section.portfolio {
 	.cbp-l-grid-mosaic .cbp-l-caption-desc {
 		color: $portfolioTextColor;
 		opacity: 0.85;
-	}
+	}*/
 }
 
 

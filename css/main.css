@@ -175,7 +175,24 @@ body {
 =========================== */
 section.portfolio {
   height: 2430px;
-  background-color: #92637e; }
+  background-color: #92637e;
+  /*	#js-grid-awesome-work {
+  		margin-top: 50px;
+  		width: 95%;
+  	}
+  
+  	.cbp-l-grid-mosaic .cbp-caption-activeWrap {
+  		background-color: rgba(4, 4, 4, 0.7);
+  	}
+  
+  	.cbp-l-grid-mosaic .cbp-l-caption-title {
+  		color: $portfolioTextColor;
+  	}
+  
+  	.cbp-l-grid-mosaic .cbp-l-caption-desc {
+  		color: $portfolioTextColor;
+  		opacity: 0.85;
+  	}*/ }
   @media only screen and (min-width: 410px) {
     section.portfolio {
       height: 2700px; } }
@@ -207,16 +224,18 @@ section.portfolio {
     margin: auto;
     width: 100%;
     height: 100px; }
-  section.portfolio #js-grid-awesome-work {
-    margin-top: 50px;
-    width: 95%; }
-  section.portfolio .cbp-l-grid-mosaic .cbp-caption-activeWrap {
-    background-color: rgba(4, 4, 4, 0.7); }
-  section.portfolio .cbp-l-grid-mosaic .cbp-l-caption-title {
-    color: whitesmoke; }
-  section.portfolio .cbp-l-grid-mosaic .cbp-l-caption-desc {
-    color: whitesmoke;
-    opacity: 0.85; }
+  section.portfolio #portfolio-placeholder {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    justify-content: space-around;
+    -webkit-justify-content: space-around;
+    height: 900px;
+    width: 500px; }
+    section.portfolio #portfolio-placeholder img {
+      width: 300px;
+      height: 250px; }
 
 /* Contact
 ===========================*/
