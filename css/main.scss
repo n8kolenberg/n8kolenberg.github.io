@@ -251,9 +251,9 @@ body {
 /* Portfolio
 =========================== */
 section.portfolio {
-	height: $primarySectionHeight * 2.7;
+	height: $primarySectionHeight * 4;
 	background-color: lighten(mix($softRed, $darkGrey), 10%);
-	@media only screen and (min-width: 410px) {
+/*	@media only screen and (min-width: 410px) {
 		height: $primarySectionHeight * 3;
 	}
 	@media only screen and (min-width: 480px) {
@@ -273,7 +273,7 @@ section.portfolio {
 	}
 	@media only screen and (min-width: 1279px) {
 		height: $primarySectionHeight;
-	}
+	}*/
 
 	.portfolioHeader {
 		font-size: $headerFontSize;
@@ -281,8 +281,9 @@ section.portfolio {
 		color: $lightGrey;
 		text-align: center;
 		padding-top: $primaryPadding * 2.5;
-		padding-bottom: $primaryPadding * 1.5;
+		padding-bottom: $primaryPadding * 1.6;
 		margin: auto;
+		margin-bottom: $primaryPadding * 1.5;
 		width: 100%;
 		height: 100px;
 	}
@@ -294,13 +295,70 @@ section.portfolio {
 		-webkit-flex-direction: column;
 		justify-content: space-around;
 		-webkit-justify-content: space-around;
-
-		height: $primarySectionHeight;
-		width: 500px;
-		img {
-			width: 300px;
-			height: 250px;
+		align-content: center;
+		-webkit-align-content: center;
+		width: 100%;
+		
+		@media only screen and (min-width: 410px) {
+			flex-direction: row;
+			-webkit-flex-direction: row;
+			flex-wrap: wrap;
+			-webkit-flex-wrap: wrap;
 		}
+		
+		.portfolioElement {
+			width: 100%;
+			max-width: 400px;
+			height: 500px;
+			background-color: $darkPurple;
+			margin: auto;
+			margin-bottom: $primaryPadding;
+			display: block;
+			
+			.pfTitle {
+				font-family: $secondaryFont;
+				font-size: $primaryPadding * 1.2;
+				color: $lightGrey;
+				text-align: center;
+				margin-top: $primaryPadding;
+				margin-bottom: $primaryPadding / 2;
+			}
+			
+			.pfDescr {
+				margin-bottom: $primaryPadding;
+				text-align: justify;
+				color: $lightGrey;
+				max-width: 350px;
+				font-size: $primaryPadding - 5px;
+			}
+
+			.pfLanguages {
+				@extend .pfDescr;
+				text-align: center;
+			}
+
+
+			img {
+				border: 1px black dotted;
+				display: block;
+				width: 325px;
+				margin: auto;
+				height: 250px;
+			}
+
+			a {
+				@extend img;
+			}
+
+			ul {
+				display: inline-block;
+				li {
+					width: 90%;
+					margin: auto;
+					list-style: none;
+				}
+			}
+		}	
 	}
 
 /*	#js-grid-awesome-work {
