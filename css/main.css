@@ -174,46 +174,14 @@ body {
 /* Portfolio
 =========================== */
 section.portfolio {
-  height: 3600px;
-  background-color: #92637e;
-  /*	@media only screen and (min-width: 410px) {
-  		height: $primarySectionHeight * 3;
-  	}
-  	@media only screen and (min-width: 480px) {
-  		height: $primarySectionHeight * 3.3;
-  	}
-  	@media only screen and (min-width: 535px) {
-  		height: $primarySectionHeight * 3.4;
-  	}
-  	@media only screen and (min-width: 540px) {
-  		height: $primarySectionHeight * 1.5;
-  	}
-  	@media only screen and (min-width: 700px) {
-  		height: $primarySectionHeight * 2.1;
-  	}
-  	@media only screen and (min-width: 1067px) {
-  		height: $primarySectionHeight * 1.4;
-  	}
-  	@media only screen and (min-width: 1279px) {
-  		height: $primarySectionHeight;
-  	}*/
-  /*	#js-grid-awesome-work {
-  		margin-top: 50px;
-  		width: 95%;
-  	}
-  
-  	.cbp-l-grid-mosaic .cbp-caption-activeWrap {
-  		background-color: rgba(4, 4, 4, 0.7);
-  	}
-  
-  	.cbp-l-grid-mosaic .cbp-l-caption-title {
-  		color: $portfolioTextColor;
-  	}
-  
-  	.cbp-l-grid-mosaic .cbp-l-caption-desc {
-  		color: $portfolioTextColor;
-  		opacity: 0.85;
-  	}*/ }
+  height: 4500px;
+  background-color: rgba(82, 81, 117, 0.9); }
+  @media only screen and (min-width: 815px) {
+    section.portfolio {
+      height: 2430px; } }
+  @media only screen and (min-width: 1215px) {
+    section.portfolio {
+      height: 1890px; } }
   section.portfolio .portfolioHeader {
     font-size: 35px;
     font-family: "Oswald", sans-serif;
@@ -234,46 +202,59 @@ section.portfolio {
     -webkit-justify-content: space-around;
     align-content: center;
     -webkit-align-content: center;
-    width: 100%; }
+    width: 90%;
+    margin: auto; }
     @media only screen and (min-width: 410px) {
       section.portfolio #portfolio-placeholder {
         flex-direction: row;
         -webkit-flex-direction: row;
         flex-wrap: wrap;
-        -webkit-flex-wrap: wrap; } }
+        -webkit-flex-wrap: wrap;
+        width: 100%; } }
     section.portfolio #portfolio-placeholder .portfolioElement {
       width: 100%;
       max-width: 400px;
       height: 500px;
-      background-color: rgba(35, 2, 46, 0.8);
+      background-color: #e3e3e3;
+      border-radius: 15px;
       margin: auto;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
       display: block; }
       section.portfolio #portfolio-placeholder .portfolioElement .pfTitle {
         font-family: "Oswald", sans-serif;
         font-size: 24px;
-        color: #e3e3e3;
+        color: #824f7b;
         text-align: center;
         margin-top: 20px;
         margin-bottom: 10px; }
       section.portfolio #portfolio-placeholder .portfolioElement .pfDescr, section.portfolio #portfolio-placeholder .portfolioElement .pfLanguages {
         margin-bottom: 20px;
         text-align: justify;
-        color: #e3e3e3;
+        color: rgba(0, 0, 0, 0.8);
         max-width: 350px;
         font-size: 15px; }
       section.portfolio #portfolio-placeholder .portfolioElement .pfLanguages {
         text-align: center; }
       section.portfolio #portfolio-placeholder .portfolioElement img, section.portfolio #portfolio-placeholder .portfolioElement a {
-        border: 1px black dotted;
+        border: 5px solid rgba(82, 81, 117, 0.9);
+        border-radius: 10px;
         display: block;
         width: 325px;
         margin: auto;
-        height: 250px; }
+        margin-top: 20px;
+        height: 250px;
+        transition: all 200ms; }
+        section.portfolio #portfolio-placeholder .portfolioElement img:hover, section.portfolio #portfolio-placeholder .portfolioElement a:hover {
+          box-shadow: 0 0 20px rgba(72, 4, 95, 0.8); }
+      section.portfolio #portfolio-placeholder .portfolioElement a {
+        border: none;
+        margin-top: 0; }
       section.portfolio #portfolio-placeholder .portfolioElement ul {
-        display: inline-block; }
+        display: inline-block;
+        width: 90%;
+        margin: auto; }
         section.portfolio #portfolio-placeholder .portfolioElement ul li {
-          width: 90%;
+          width: 100%;
           margin: auto;
           list-style: none; }
 
