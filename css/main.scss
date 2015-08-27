@@ -251,29 +251,14 @@ body {
 /* Portfolio
 =========================== */
 section.portfolio {
-	height: $primarySectionHeight * 4;
-	background-color: lighten(mix($softRed, $darkGrey), 10%);
-/*	@media only screen and (min-width: 410px) {
-		height: $primarySectionHeight * 3;
+	height: $primarySectionHeight * 5;
+	background-color: lighten(mix($darkPurple, $darkGrey), 10%);
+	@media only screen and (min-width: 815px) {
+		height: $primarySectionHeight * 2.7;
 	}
-	@media only screen and (min-width: 480px) {
-		height: $primarySectionHeight * 3.3;
-	}
-	@media only screen and (min-width: 535px) {
-		height: $primarySectionHeight * 3.4;
-	}
-	@media only screen and (min-width: 540px) {
-		height: $primarySectionHeight * 1.5;
-	}
-	@media only screen and (min-width: 700px) {
+	@media only screen and (min-width: 1215px) {
 		height: $primarySectionHeight * 2.1;
 	}
-	@media only screen and (min-width: 1067px) {
-		height: $primarySectionHeight * 1.4;
-	}
-	@media only screen and (min-width: 1279px) {
-		height: $primarySectionHeight;
-	}*/
 
 	.portfolioHeader {
 		font-size: $headerFontSize;
@@ -297,28 +282,31 @@ section.portfolio {
 		-webkit-justify-content: space-around;
 		align-content: center;
 		-webkit-align-content: center;
-		width: 100%;
+		width: 90%;
+		margin: auto;
 		
 		@media only screen and (min-width: 410px) {
 			flex-direction: row;
 			-webkit-flex-direction: row;
 			flex-wrap: wrap;
 			-webkit-flex-wrap: wrap;
+			width: 100%;
 		}
 		
 		.portfolioElement {
 			width: 100%;
 			max-width: 400px;
 			height: 500px;
-			background-color: $darkPurple;
+			background-color: $lightGrey;
+			border-radius: 15px;
 			margin: auto;
-			margin-bottom: $primaryPadding;
+			margin-bottom: $primaryPadding * 1.5;
 			display: block;
 			
 			.pfTitle {
 				font-family: $secondaryFont;
 				font-size: $primaryPadding * 1.2;
-				color: $lightGrey;
+				color: darken(mix($lightPurple, $magenta), 10%);
 				text-align: center;
 				margin-top: $primaryPadding;
 				margin-bottom: $primaryPadding / 2;
@@ -327,7 +315,7 @@ section.portfolio {
 			.pfDescr {
 				margin-bottom: $primaryPadding;
 				text-align: justify;
-				color: $lightGrey;
+				color: darken($darkPurple, 10%);
 				max-width: 350px;
 				font-size: $primaryPadding - 5px;
 			}
@@ -339,45 +327,38 @@ section.portfolio {
 
 
 			img {
-				border: 1px black dotted;
+				border: 5px solid lighten(mix($darkPurple, $darkGrey), 10%);
+				border-radius: $primaryPadding / 2;
 				display: block;
 				width: 325px;
 				margin: auto;
+				margin-top: $primaryPadding;
 				height: 250px;
+				transition: all 200ms;
+				&:hover {
+					box-shadow: 0 0 20px lighten($darkPurple, 10%);
+				}
 			}
 
 			a {
 				@extend img;
+				border: none;
+				margin-top: 0;
 			}
 
 			ul {
 				display: inline-block;
+				width: 90%;
+				margin: auto;
+
 				li {
-					width: 90%;
+					width: 100%;
 					margin: auto;
 					list-style: none;
 				}
 			}
 		}	
 	}
-
-/*	#js-grid-awesome-work {
-		margin-top: 50px;
-		width: 95%;
-	}
-
-	.cbp-l-grid-mosaic .cbp-caption-activeWrap {
-		background-color: rgba(4, 4, 4, 0.7);
-	}
-
-	.cbp-l-grid-mosaic .cbp-l-caption-title {
-		color: $portfolioTextColor;
-	}
-
-	.cbp-l-grid-mosaic .cbp-l-caption-desc {
-		color: $portfolioTextColor;
-		opacity: 0.85;
-	}*/
 }
 
 
