@@ -28,7 +28,7 @@ var soundful = new PortfolioPiece({
     thumbnail : "img/soundful.jpg",
     title : "Soundful",
     link : "http://n8kolenberg.github.io/soundful/",
-    description : "Search for songs by any sort of tag and get a playlist. The capstone project for the Thinkful Front End Development course. I used SoundCloud's API to get an object of songs based on a user's input.",
+    description : "The capstone project for the Thinkful Front End Development course. I used SoundCloud's API to get an object of songs based on a user's input.",
     languages: "HTML, CSS3, jQuery, Ajax"
 });
 
@@ -83,7 +83,16 @@ var Doobiedo = new PortfolioPiece({
     languages: "HTML, CSS3, jQuery"
 });
 
-var portfolioArray = [soundful, batquiz, HotorCold, FizzBuzz, Karma, jquerySF, Doobiedo];
+
+var stackoAjax = new PortfolioPiece({
+    thumbnail : "img/soundful.jpg",
+    title : "PLACEHOLDER FOR SO AJAX",
+    link : "http://n8kolenberg.github.io/ajax-stackoverflow/",
+    description : "Get unanswered questions based on tags. Using Stackoverflow's API, I created a tool that could allow you to search for unanswered questions",
+    languages: "HTML, CSS3, jQuery, Ajax"
+});
+
+var portfolioArray = [soundful, batquiz, HotorCold, FizzBuzz, Karma, jquerySF, Doobiedo, stackoAjax];
 
 
 // Document.ready
