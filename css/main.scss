@@ -393,9 +393,16 @@ section.portfolio {
 		h1 {
 			text-align: center;
 			padding-top: $primaryPadding * 2;
-			padding-bottom: $primaryPadding * 1.4;
+			margin-bottom: $primaryPadding * 1.4;
 			font-family: $secondaryFont;
 			font-size: $headerFontSize;
+			color: $darkGrey;
+		}
+		
+		h4 {
+			text-align: center;
+			font-family: $secondaryFont;
+			font-size: $primaryPadding;
 			color: $darkGrey;
 		}
 

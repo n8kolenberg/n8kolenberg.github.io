@@ -138,4 +138,18 @@ $(function(){
     }); // End on click
 
 
+    // When the user hovers over the contact icons, the information gets shown
+    $("span.icon-paper-plane-empty").mouseenter(function(){
+        var $contactDetails = $('#contactDetails');
+        $contactDetails.text("nkolenberg@gmail.com").fadeIn().removeClass("hide");
+    }) // End hover
+
+    $("span.icon-phone-outline").mouseenter(function(){
+        var $contactDetails = $('#contactDetails');
+        $contactDetails.text("+44 (0) 747 277 1489").fadeIn().removeClass("hide");
+    }) // End hover
+
+
+
+
 }); //End ready
