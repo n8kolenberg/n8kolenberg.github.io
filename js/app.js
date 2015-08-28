@@ -142,12 +142,12 @@ $(function(){
     $("span.icon-paper-plane-empty").mouseenter(function(){
         var $contactDetails = $('#contactDetails');
         $contactDetails.text("nkolenberg@gmail.com").fadeIn().removeClass("hide");
-    }) // End hover
+    }) // End mouseenter
 
     $("span.icon-phone-outline").mouseenter(function(){
         var $contactDetails = $('#contactDetails');
         $contactDetails.text("+44 (0) 747 277 1489").fadeIn().removeClass("hide");
-    }) // End hover
+    }) // End mouseenter
 
 
 
