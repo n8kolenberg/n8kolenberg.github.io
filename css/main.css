@@ -19,13 +19,20 @@ body {
 .intro {
   height: 850px;
   opacity: 0.9;
-  background: linear-gradient(to bottom, rgba(234, 171, 172, 0.5) 40%, rgba(255, 255, 255, 0.5) 80%), url("../img/london-mod2.jpg");
-  background: -webkit-linear-gradient(to bottom, rgba(234, 171, 172, 0.5) 40%, rgba(255, 255, 255, 0.5) 80%), url("../img/london-mod2.jpg");
+  background: linear-gradient(to bottom, rgba(244, 212, 212, 0.5) 30%, rgba(255, 255, 255, 0.5) 90%);
+  background: -webkit-linear-gradient(to bottom, rgba(239, 191, 192, 0.5) 30%, rgba(255, 255, 255, 0.5) 90%);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   background-blend-mode: screen;
   position: relative; }
+
+.covervid-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
 
 .diamond {
   position: absolute;
@@ -69,34 +76,44 @@ body {
   background-color: #e3e7fa;
   margin: auto; }
   .description .content {
-    width: 90%;
+    width: 100%;
     max-width: 900px;
     padding-top: 20px;
     margin: auto;
     text-align: center; }
-    @media only screen and (min-width: 900px) {
+    @media only screen and (min-width: 950px) {
       .description .content {
-        max-width: 1200px;
-        width: 100%; } }
+        width: 90%;
+        height: 775px; } }
+    .description .content .flex-container {
+      width: 100%;
+      display: flex;
+      display: -webkit-flex;
+      flex-direction: column;
+      -webkit-flex-direction: column;
+      justify-content: space-around;
+      -webkit-justify-content: space-around;
+      align-content: center;
+      -webkit-align-content: center; }
+      @media only screen and (min-width: 900px) {
+        .description .content .flex-container {
+          flex-direction: row;
+          -webkit-flex-direction: row;
+          flex-wrap: wrap;
+          -flex-wrap: wrap; } }
     .description .content img.n8Image, .description .content section.portfolio #portfolio-placeholder .portfolioElement a.n8Image, section.portfolio #portfolio-placeholder .portfolioElement .description .content a.n8Image {
-      width: 95%;
+      width: 250px;
       max-width: 300px;
+      height: 280px;
       text-align: center;
       margin: auto;
-      border-radius: 20px;
-      box-shadow: 0 0 2px rgba(44, 62, 80, 0.9);
       margin-top: 10px;
-      margin-bottom: 20px; }
+      margin-bottom: 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 2px rgba(44, 62, 80, 0.9); }
       @media only screen and (min-width: 900px) {
         .description .content img.n8Image, .description .content section.portfolio #portfolio-placeholder .portfolioElement a.n8Image, section.portfolio #portfolio-placeholder .portfolioElement .description .content a.n8Image {
-          width: 30%;
-          float: left;
-          display: inline;
-          margin-left: 80px;
-          margin-right: 80px; } }
-      @media only screen and (min-width: 1200px) {
-        .description .content img.n8Image, .description .content section.portfolio #portfolio-placeholder .portfolioElement a.n8Image, section.portfolio #portfolio-placeholder .portfolioElement .description .content a.n8Image {
-          margin-left: 100px; } }
+          margin-bottom: 20px; } }
     .description .content h1 {
       font-family: "Oswald", sans-serif;
       font-size: 35px;
@@ -104,9 +121,13 @@ body {
       margin-bottom: 25px;
       color: #ac405f; }
     .description .content p {
+      width: 90%;
+      max-width: 600px;
+      margin: auto;
+      margin-bottom: 30px;
       font-family: "Lato", sans-serif;
       line-height: 1.5;
-      font-size: 20px;
+      font-size: 18px;
       font-weight: lighter;
       color: #3a4854; }
       .description .content p span {
@@ -120,56 +141,51 @@ body {
           color: #ef2d56; }
       @media only screen and (min-width: 900px) {
         .description .content p {
-          width: 50%;
-          float: left;
-          display: inline;
-          font-size: 18px; } }
+          width: 65%;
+          margin-bottom: 20px;
+          font-size: 17.1px; } }
   .description .skillSet {
     display: none; }
-    @media only screen and (min-width: 550px) {
+    @media only screen and (min-width: 950px) {
       .description .skillSet {
         display: block;
+        position: relative;
+        left: -300px;
+        top: -265px;
         padding: 40px;
-        width: 90%;
-        margin-top: -50px; }
+        width: 350px; }
         .description .skillSet .skillsHeader {
           font: "Lato", sans-serif;
           font-size: 20.5px;
           color: #ac405f;
           display: block;
-          clear: left;
           text-align: left; }
         .description .skillSet .skills {
-          clear: both;
           height: 30px;
-          display: block;
+          display: flex;
+          display: -webkit-flex;
+          flex-direction: column;
+          -webkit-flex-direction: column;
+          justify-content: space-around;
+          -webkit-justify-content: space-around;
+          align-content: center;
+          -webkit-align-content: center;
+          flex-direction: row;
+          -webkit-flex-direction: row;
+          flex-wrap: no-wrap;
+          -webkit-flex-wrap: no-wrap;
           text-align: left; }
           .description .skillSet .skills span {
-            display: inline-block;
+            display: inline;
             text-align: left;
             font-size: 20px;
             color: #ef2d56; }
           .description .skillSet .skills p.skillDescr {
-            display: inline-block;
+            width: 400px;
             font-size: 15px;
-            margin-left: 6.66667px;
+            margin-left: 20px;
+            padding-bottom: 20px;
             text-align: left; } }
-    @media only screen and (min-width: 900px) {
-      .description .skillSet {
-        text-align: center; }
-        .description .skillSet .skillsHeader, .description .skillSet .skills {
-          margin-left: 70px; } }
-    @media only screen and (min-width: 1290px) {
-      .description .skillSet {
-        width: 100%;
-        margin-top: 10px; }
-        .description .skillSet .skillsHeader {
-          font-size: 24px;
-          text-align: center; }
-        .description .skillSet .skills {
-          display: inline;
-          margin: 10px;
-          margin-left: 0; } }
 
 /* Portfolio
 =========================== */
@@ -210,13 +226,13 @@ section.portfolio {
         -webkit-flex-direction: row;
         flex-wrap: wrap;
         -webkit-flex-wrap: wrap;
-        width: 100%; } }
+        width: 95%; } }
     section.portfolio #portfolio-placeholder .portfolioElement {
       width: 100%;
       max-width: 400px;
       height: 500px;
       background-color: #e3e3e3;
-      border-radius: 15px;
+      border-radius: 10px;
       margin: auto;
       margin-bottom: 30px;
       display: block; }
@@ -246,6 +262,9 @@ section.portfolio {
         transition: all 200ms; }
         section.portfolio #portfolio-placeholder .portfolioElement img:hover, section.portfolio #portfolio-placeholder .portfolioElement a:hover {
           box-shadow: 0 0 20px rgba(72, 4, 95, 0.8); }
+        @media only screen and (min-width: 858px) {
+          section.portfolio #portfolio-placeholder .portfolioElement img, section.portfolio #portfolio-placeholder .portfolioElement a {
+            width: 360px; } }
       section.portfolio #portfolio-placeholder .portfolioElement a {
         border: none;
         margin-top: 0; }
