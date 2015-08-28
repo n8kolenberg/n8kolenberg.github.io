@@ -85,10 +85,10 @@ var Doobiedo = new PortfolioPiece({
 
 
 var stackoAjax = new PortfolioPiece({
-    thumbnail : "img/soundful.jpg",
-    title : "PLACEHOLDER FOR SO AJAX",
+    thumbnail : "img/stacko.jpg",
+    title : "StackOverlow Rep Builder",
     link : "http://n8kolenberg.github.io/ajax-stackoverflow/",
-    description : "Get unanswered questions based on tags. Using Stackoverflow's API, I created a tool that could allow you to search for unanswered questions",
+    description : "Get unanswered questions on StackOverflow and answer them yourself! This app allows you to search for unanswered questions on coding topics and users with high SO reputations",
     languages: "HTML, CSS3, jQuery, Ajax"
 });
 
@@ -110,48 +110,16 @@ $(function(){
 
     }); // End fullpage init
 
+
+    // Appends the portfolio to the placeholder div in the DOM
     appendPortfolio(portfolioArray);
-
-
-
-// initialise cubeportfolio
-    //  $('#js-grid-awesome-work').cubeportfolio({
-    //     filters: '#js-filters-grid-awesome-work',
-    //     loadMore: '#js-loadMore-awesomeWork',
-    //     loadMoreAction: 'click',
-    //     layoutMode: 'grid',
-    //     sortToPreventGaps: true,
-    //     mediaQueries: [{
-    //         width: 1200,
-    //         cols: 4
-    //     }, {
-    //         width: 1000,
-    //         cols: 3
-    //     }, {
-    //         width: 500,
-    //         cols: 2
-    //     }, {
-    //         width: 320,
-    //         cols: 1
-    //     }],
-    //     defaultFilter: '*',
-    //     animationType: 'quicksand',
-    //     gapHorizontal: 0,
-    //     gapVertical: 0,
-    //     gridAdjustment: 'responsive',
-    //     caption: 'zoom',
-    //     displayType: 'sequentially',
-    //     displayTypeSpeed: 100,
-    // });
 
 
     //Initialise covervid.js
     $('.covervid-video').coverVid(1920, 1080);
 
 
-    $(document).on("click", "#nav li a, .icon-angle-down, .icon-angle-up", function(event){        
-        event.preventDefault();
-
+    $(document).on("click", "#nav li a", function(event){       
         //This should set the variable "page" as either #home, #profile, #portfolio, or #contact:
         if( $(this).attr("href") ) {
             var page = $(this).attr("href");
