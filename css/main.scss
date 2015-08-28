@@ -264,11 +264,11 @@ body {
 section.portfolio {
 	height: $primarySectionHeight * 5;
 	background-color: lighten(mix($darkPurple, $darkGrey), 10%);
-	@media only screen and (min-width: 815px) {
+	@media only screen and (min-width: 858px) {
 		height: $primarySectionHeight * 2.7;
 	}
-	@media only screen and (min-width: 1215px) {
-		height: $primarySectionHeight * 2.1;
+	@media only screen and (min-width: 1279px) {
+		height: $primarySectionHeight * 2.05;
 	}
 
 	.portfolioHeader {
