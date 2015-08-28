@@ -7,7 +7,7 @@ $primary-bgColor: #FAFAFA;
 $secondary-bgColor: rgba(240, 245, 247, 1);
 $primarySectionHeight: 900px;
 $headerFontSize: 35px;
-$pFontSize: 20px;
+$pFontSize:18px;
 
 $headerColor1: rgba(224, 130, 131, 0.5);
 $headerColor2: rgba(228, 241, 254, 0.5);
@@ -30,6 +30,19 @@ $portfolioTextColor: whitesmoke;
     background-size: cover;
     background-position: center;
 }
+
+@mixin displayFlexBox {
+	display: flex;
+	display: -webkit-flex;
+	flex-direction: column;
+	-webkit-flex-direction: column;
+	justify-content: space-around;
+	-webkit-justify-content: space-around;
+	align-content: center;
+	-webkit-align-content: center;
+}
+
+
 
 /*General 
 ===========================*/
@@ -58,14 +71,20 @@ body {
 .intro {
 	height: $primarySectionHeight - 50px;
 	opacity: 0.9;
-	background: linear-gradient(to bottom, lighten($headerColor1, 10%) 40%, lighten($headerColor2, 10%) 80%), url('../img/london-mod2.jpg');
-	background: -webkit-linear-gradient(to bottom, lighten($headerColor1, 10%) 40%, lighten($headerColor2, 10%) 80%), url('../img/london-mod2.jpg');
+	background: linear-gradient(to bottom, lighten($headerColor1, 20%) 30%, lighten($headerColor2, 10%) 90%);
+	background: -webkit-linear-gradient(to bottom, lighten($headerColor1, 15%) 30%, lighten($headerColor2, 10%) 90%);
     @include bgImageProps;
     background-blend-mode: screen;
     position: relative;
 }
 
-
+.covervid-wrapper {
+ 	position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
 
 .diamond {
 	position: absolute;
@@ -118,34 +137,38 @@ body {
 	background-color: lighten($lightPurple, 10%);
 	margin: auto;	
 	.content {
-		width: 90%;
+		width: 100%;
 		max-width: 900px;
 		padding-top: 20px;
 		margin: auto;
 		text-align: center;
-		@media only screen and (min-width: 900px) {
-			max-width: 1200px;
-			width: 100%;
+		@media only screen and (min-width: 950px) {
+			width: 90%;
+			height: $primarySectionHeight - 125px;
 		}
-		
+		.flex-container {
+			width: 100%;
+			@include displayFlexBox;
+			@media only screen and (min-width: 900px) {
+				flex-direction: row;
+				-webkit-flex-direction: row;
+				flex-wrap: wrap;
+				-flex-wrap: wrap;
+			}
+		}
+
 		img.n8Image {
-			width: 95%;
+			width: 250px;
 			max-width: 300px;
+			height: 280px;
 			text-align: center;
 			margin: auto;
+			margin-top: $primaryPadding / 2;
+			margin-bottom: $primaryPadding * 1.5;
 			border-radius: 20px;
 			box-shadow: 0 0 2px $primary-color;
-			margin-top: $primaryPadding / 2;
-			margin-bottom: $primaryPadding;
 			@media only screen and (min-width: 900px) {
-				width: 30%;
-				float: left;
-				display: inline;
-				margin-left: $primaryPadding * 4;
-				margin-right: $primaryPadding * 4;
-			}
-			@media only screen and (min-width: 1200px) {
-				margin-left: $primaryPadding * 5;
+				margin-bottom: $primaryPadding;
 			}
 		}
 
@@ -158,6 +181,10 @@ body {
 		}
 
 		p {
+			width: 90%;
+			max-width: 600px;
+			margin: auto;
+			margin-bottom: 30px;
 			font-family: $primaryFont;
 			line-height: 1.5;
 			font-size: $pFontSize;
@@ -176,73 +203,57 @@ body {
 				}
 			}
 			@media only screen and (min-width: 900px) {
-				width: 50%;
-				float: left;
-				display: inline;
-				font-size: $pFontSize * 0.9;
+				width: 65%;
+				margin-bottom: $primaryPadding;
+				font-size: $pFontSize * 0.95;
 			}
 		}
 	}
 
 	.skillSet {
 		display: none;
-		@media only screen and (min-width: 550px) {
+		@media only screen and (min-width: 950px) {
 			display: block;
+			position: relative;
+			left: -300px;
+			top: -265px;
 			padding: 40px;
-			width: 90%;
-			margin-top: -50px;
+			width: 350px;
 
 			.skillsHeader {
 				font: $primaryFont;
 				font-size: $primaryPadding * 1.025;
 				color: lighten($softRed, 5%);
 				display: block;
-				clear: left;
 				text-align: left;
 			}
 
 			.skills {
-				clear: both;
 				height: 30px;
-				display: block;
+				@include displayFlexBox;
+				flex-direction: row;
+				-webkit-flex-direction: row;
+				flex-wrap: no-wrap;
+				-webkit-flex-wrap: no-wrap;
 				text-align: left;
+				
 				span {
-					display: inline-block;
+					display: inline;
 					text-align: left;
 					font-size: $primaryPadding;
 					color: $brightRed;
 				}
 
 				p.skillDescr {
-					display: inline-block;
+					width: 400px;
 					font-size: $primaryPadding - 5px;
-					margin-left: $primaryPadding / 3;
+					margin-left: $primaryPadding;
+					padding-bottom: $primaryPadding;
 					text-align: left;
 				}
 			}
 		}
 
-		@media only screen and (min-width: 900px) {
-			text-align: center;
-			.skillsHeader, .skills {
-				margin-left: 70px;
-			}
-		}
-
-		@media only screen and (min-width: 1290px) {
-			width: 100%;
-			margin-top: 10px;
-			.skillsHeader {
-				font-size: $primaryPadding * 1.2;
-				text-align: center;
-			}
-
-			.skills {
-				display: inline;
-				margin: 10px;
-				margin-left: 0;
-			}
-		}
 	}
 }
 
@@ -274,14 +285,7 @@ section.portfolio {
 	}
 
 	#portfolio-placeholder {
-		display: flex;
-		display: -webkit-flex;
-		flex-direction: column;
-		-webkit-flex-direction: column;
-		justify-content: space-around;
-		-webkit-justify-content: space-around;
-		align-content: center;
-		-webkit-align-content: center;
+		@include displayFlexBox;
 		width: 90%;
 		margin: auto;
 		
@@ -290,7 +294,7 @@ section.portfolio {
 			-webkit-flex-direction: row;
 			flex-wrap: wrap;
 			-webkit-flex-wrap: wrap;
-			width: 100%;
+			width: 95%;
 		}
 		
 		.portfolioElement {
@@ -298,7 +302,7 @@ section.portfolio {
 			max-width: 400px;
 			height: 500px;
 			background-color: $lightGrey;
-			border-radius: 15px;
+			border-radius: 10px;
 			margin: auto;
 			margin-bottom: $primaryPadding * 1.5;
 			display: block;
@@ -338,6 +342,10 @@ section.portfolio {
 				&:hover {
 					box-shadow: 0 0 20px lighten($darkPurple, 10%);
 				}
+
+				@media only screen and (min-width: 858px) {
+					width: 360px;
+				}		
 			}
 
 			a {
