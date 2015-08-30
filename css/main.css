@@ -195,6 +195,9 @@ section.portfolio {
   @media only screen and (min-width: 858px) {
     section.portfolio {
       height: 2430px; } }
+  @media only screen and (min-width: 1024px) and (orientation: portrait) {
+    section.portfolio {
+      height: 3600px; } }
   @media only screen and (min-width: 1279px) {
     section.portfolio {
       height: 1845.0px; } }
@@ -334,7 +337,7 @@ section.portfolio {
   background-color: #f0f5f7; }
   .social ul {
     font-family: 'fontello';
-    font-size: 44.625px;
+    font-size: 35px;
     width: 100%;
     margin: auto;
     padding-top: 20px;
@@ -375,7 +378,7 @@ section.portfolio {
       .social #imgCredit a:hover {
         color: #993955; }
 
-/* Navigation arrows
+/* Navigation dots
 ===========================*/
 #fp-nav ul li .fp-tooltip {
   color: #c43356;

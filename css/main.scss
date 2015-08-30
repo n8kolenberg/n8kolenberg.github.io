@@ -267,6 +267,12 @@ section.portfolio {
 	@media only screen and (min-width: 858px) {
 		height: $primarySectionHeight * 2.7;
 	}
+
+	@media only screen and (min-width: 1024px) and (orientation : portrait) {
+		height: $primarySectionHeight * 4;
+	}
+
+
 	@media only screen and (min-width: 1279px) {
 		height: $primarySectionHeight * 2.05;
 	}
@@ -443,7 +449,7 @@ section.portfolio {
 	
 	ul {
 		font-family: 'fontello';
-		font-size: $headerFontSize * 1.275;
+		font-size: $headerFontSize;
 		width: 100%;
 		margin: auto;
 		padding-top: $primaryPadding;
@@ -505,7 +511,7 @@ section.portfolio {
 
 
 
-/* Navigation arrows
+/* Navigation dots
 ===========================*/
 
 #fp-nav ul li {
