@@ -264,20 +264,13 @@ body {
 section.portfolio {
 	height: $primarySectionHeight * 5;
 	background-color: lighten(mix($darkPurple, $darkGrey), 10%);
-/*	@media only screen and (min-width: 858px) {
-		height: $primarySectionHeight * 2.7;
-	}*/
 
-	@media only screen 
-  	and (min-device-width: 768px) 
-  	and (max-device-width: 1024px) 
-  	and (orientation: landscape) 
-  	and (-webkit-min-device-pixel-ratio: 2) {
-	height: $primarySectionHeight * 5;
+	@media only screen and (min-width: 752px) {
+		height: $primarySectionHeight * 2.7;
 }
 
 
-	@media only screen and (min-width: 1279px) {
+	@media only screen and (min-width: 1214px) {
 		height: $primarySectionHeight * 2.05;
 	}
 
@@ -306,19 +299,23 @@ section.portfolio {
 			-webkit-flex-wrap: wrap;
 			justify-content: space-between;
 			-webkit-justify-content: space-between;
-			width: 100%;
+			width: 95%;
 		}
 		
 		
 
 		.portfolioElement {
-			width: 380px;
+			width: 350px;
 			height: 500px;
 			background-color: $lightGrey;
 			border-radius: 10px;
 			margin: auto;
 			margin-bottom: $primaryPadding * 1.5;
 			display: block;
+
+			@media only screen and (min-width: 858px) {
+					width: 380px;
+				}
 			
 			.pfTitle {
 				font-family: $secondaryFont;
@@ -330,15 +327,17 @@ section.portfolio {
 			}
 			
 			.pfDescr {
-				margin-bottom: $primaryPadding;
+				margin-bottom: $primaryPadding * 2;
 				text-align: justify;
 				color: darken($darkPurple, 10%);
 				max-width: 350px;
+				margin: auto;
 				font-size: $primaryPadding - 5px;
 			}
 
 			.pfLanguages {
 				@extend .pfDescr;
+				margin-top: $primaryPadding - 5px;
 				text-align: center;
 			}
 
@@ -369,12 +368,11 @@ section.portfolio {
 
 			ul {
 				display: inline-block;
-				width: 320px;
+				-webkit-padding-start: 20px; /*To counter normalize padding*/
+				width: 95%;
 				margin: auto;
 
 				li {
-					width: 100%;
-					margin: auto;
 					list-style: none;
 				}
 			}
