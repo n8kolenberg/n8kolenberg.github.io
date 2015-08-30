@@ -289,7 +289,7 @@ section.portfolio {
 
 	#portfolio-placeholder {
 		@include displayFlexBox;
-		width: 90%;
+		width: 95%;
 		margin: auto;
 		
 		@media only screen and (min-width: 410px) {
@@ -299,7 +299,6 @@ section.portfolio {
 			-webkit-flex-wrap: wrap;
 			justify-content: space-between;
 			-webkit-justify-content: space-between;
-			width: 95%;
 		}
 		
 		
@@ -384,7 +383,7 @@ section.portfolio {
 /* Contact
 ===========================*/
 .contact {
-	height: $primarySectionHeight - 250px;
+	height: $primarySectionHeight - 300px;
 	background-image: url('../img/getintouch.jpg');
 	@include bgImageProps;
 	position: relative;
