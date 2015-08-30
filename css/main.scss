@@ -119,8 +119,9 @@ body {
 /* Introduction
 ===========================*/
 
+
 .intro {
-	height: $primarySectionHeight;
+	height: $primarySectionHeight * 1.005;
 	opacity: 0.9;
 	background: linear-gradient(to bottom, lighten($headerColor1, 20%) 30%, lighten($headerColor2, 10%) 90%);
 	background: -webkit-linear-gradient(to bottom, lighten($headerColor1, 15%) 30%, lighten($headerColor2, 10%) 90%);
@@ -277,6 +278,7 @@ body {
 				color: lighten($softRed, 5%);
 				display: block;
 				text-align: left;
+				padding-top: 10px;
 				padding-bottom: 10px;
 			}
 
@@ -320,7 +322,6 @@ section.portfolio {
 	@media only screen and (min-width: 752px) {
 		height: $primarySectionHeight * 2.7;
 }
-
 
 	@media only screen and (min-width: 1214px) {
 		height: $primarySectionHeight * 2.05;
