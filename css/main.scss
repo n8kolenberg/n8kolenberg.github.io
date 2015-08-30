@@ -312,8 +312,7 @@ section.portfolio {
 		
 
 		.portfolioElement {
-			/*width: 100%;*/
-			max-width: 300px;
+			width: 380px;
 			height: 500px;
 			background-color: $lightGrey;
 			border-radius: 10px;
@@ -348,7 +347,7 @@ section.portfolio {
 				border: 5px solid lighten(mix($darkPurple, $darkGrey), 10%);
 				border-radius: $primaryPadding / 2;
 				display: block;
-				width: 125px;
+				width: 325px;
 				margin: auto;
 				margin-top: $primaryPadding;
 				height: 250px;
@@ -358,7 +357,7 @@ section.portfolio {
 				}
 
 				@media only screen and (min-width: 858px) {
-					width: 125px;
+					width: 360px;
 				}		
 			}
 
@@ -370,12 +369,12 @@ section.portfolio {
 
 			ul {
 				display: inline-block;
-				/*width: 90%;*/
-				/*margin: auto;*/
+				width: 320px;
+				margin: auto;
 
 				li {
-			/*		width: 100%;
-					margin: auto;*/
+					width: 100%;
+					margin: auto;
 					list-style: none;
 				}
 			}
