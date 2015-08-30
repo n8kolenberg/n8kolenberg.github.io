@@ -119,8 +119,14 @@ body {
 /* Introduction
 ===========================*/
 
+section#home {
+	height: 50rem;
+}
+
+
+
 .intro {
-	height: $primarySectionHeight - 80px;
+	height: 100%;
 	opacity: 0.9;
 	background: linear-gradient(to bottom, lighten($headerColor1, 20%) 30%, lighten($headerColor2, 10%) 90%);
 	background: -webkit-linear-gradient(to bottom, lighten($headerColor1, 15%) 30%, lighten($headerColor2, 10%) 90%);
@@ -263,7 +269,7 @@ body {
 
 	.skillSet {
 		display: none;
-		@media only screen and (min-width: 950px) {
+		@media only screen and (min-width: 1024px) {
 			display: block;
 			position: relative;
 			left: -300px;

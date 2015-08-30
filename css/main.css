@@ -65,8 +65,11 @@ body {
   src: url("font/code.woff"); }
 /* Introduction
 ===========================*/
+section#home {
+  height: 50rem; }
+
 .intro {
-  height: 820px;
+  height: 100%;
   opacity: 0.9;
   background: linear-gradient(to bottom, rgba(244, 212, 212, 0.5) 30%, rgba(255, 255, 255, 0.5) 90%);
   background: -webkit-linear-gradient(to bottom, rgba(239, 191, 192, 0.5) 30%, rgba(255, 255, 255, 0.5) 90%);
@@ -195,7 +198,7 @@ body {
           font-size: 17.1px; } }
   .description .skillSet {
     display: none; }
-    @media only screen and (min-width: 950px) {
+    @media only screen and (min-width: 1024px) {
       .description .skillSet {
         display: block;
         position: relative;
