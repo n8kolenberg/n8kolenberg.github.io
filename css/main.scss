@@ -268,7 +268,7 @@ section.portfolio {
 		height: $primarySectionHeight * 2.7;
 	}
 
-	@media only screen and (min-width: 1024px) and (orientation : portrait) {
+	@media only screen and (min-width: 1024px) and (orientation : landscape) {
 		height: $primarySectionHeight * 5;
 	}
 
