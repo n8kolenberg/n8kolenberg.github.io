@@ -382,6 +382,10 @@ section.portfolio {
 
 /* Contact
 ===========================*/
+.contactN8 {
+	height: $primarySectionHeight - 100px;
+}
+
 .contact {
 	height: $primarySectionHeight - 300px;
 	background-image: url('../img/getintouch.jpg');

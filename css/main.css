@@ -284,6 +284,9 @@ section.portfolio {
 
 /* Contact
 ===========================*/
+.contactN8 {
+  height: 800px; }
+
 .contact {
   height: 600px;
   background-image: url("../img/getintouch.jpg");
