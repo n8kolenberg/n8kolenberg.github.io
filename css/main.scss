@@ -268,7 +268,8 @@ section.portfolio {
 		height: $primarySectionHeight * 2.7;
 	}
 
-	@media only screen and (min-width: 1024px) and (orientation : landscape) {
+	@media only screen and (min-width: 1024px) and (orientation: landscape)
+	and (-webkit-min-device-pixel-ratio: 2) {
 		height: $primarySectionHeight * 5;
 	}
 
@@ -300,7 +301,9 @@ section.portfolio {
 			-webkit-flex-direction: row;
 			flex-wrap: wrap;
 			-webkit-flex-wrap: wrap;
-			width: 95%;
+			justify-content: space-between;
+			-webkit-justify-content: space-between;
+			width: 100%;
 		}
 		
 		.portfolioElement {

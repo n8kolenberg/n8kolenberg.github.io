@@ -195,7 +195,7 @@ section.portfolio {
   @media only screen and (min-width: 858px) {
     section.portfolio {
       height: 2430px; } }
-  @media only screen and (min-width: 1024px) and (orientation: landscape) {
+  @media only screen and (min-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
     section.portfolio {
       height: 4500px; } }
   @media only screen and (min-width: 1279px) {
@@ -229,7 +229,9 @@ section.portfolio {
         -webkit-flex-direction: row;
         flex-wrap: wrap;
         -webkit-flex-wrap: wrap;
-        width: 95%; } }
+        justify-content: space-between;
+        -webkit-justify-content: space-between;
+        width: 100%; } }
     section.portfolio #portfolio-placeholder .portfolioElement {
       width: 100%;
       max-width: 400px;
