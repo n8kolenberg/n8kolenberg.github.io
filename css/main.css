@@ -1,5 +1,54 @@
 /* Main Variables */
 /* Mixins */
+/* CSS RESET 
+===========================*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, section.portfolio #portfolio-placeholder .portfolioElement a, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
 /*General 
 ===========================*/
 body {
@@ -17,7 +66,7 @@ body {
 /* Introduction
 ===========================*/
 .intro {
-  height: 100%;
+  height: 900px;
   opacity: 0.9;
   background: linear-gradient(to bottom, rgba(244, 212, 212, 0.5) 30%, rgba(255, 255, 255, 0.5) 90%);
   background: -webkit-linear-gradient(to bottom, rgba(239, 191, 192, 0.5) 30%, rgba(255, 255, 255, 0.5) 90%);
@@ -159,7 +208,8 @@ body {
           font-size: 20.5px;
           color: #ac405f;
           display: block;
-          text-align: left; }
+          text-align: left;
+          padding-bottom: 10px; }
         .description .skillSet .skills {
           height: 30px;
           display: flex;
@@ -246,16 +296,6 @@ section.portfolio {
         text-align: center;
         margin-top: 20px;
         margin-bottom: 10px; }
-      section.portfolio #portfolio-placeholder .portfolioElement .pfDescr, section.portfolio #portfolio-placeholder .portfolioElement .pfLanguages {
-        margin-bottom: 40px;
-        text-align: justify;
-        color: rgba(0, 0, 0, 0.8);
-        max-width: 350px;
-        margin: auto;
-        font-size: 15px; }
-      section.portfolio #portfolio-placeholder .portfolioElement .pfLanguages {
-        margin-top: 15px;
-        text-align: center; }
       section.portfolio #portfolio-placeholder .portfolioElement img, section.portfolio #portfolio-placeholder .portfolioElement a {
         border: 5px solid rgba(82, 81, 117, 0.9);
         border-radius: 10px;
@@ -274,18 +314,25 @@ section.portfolio {
         border: none;
         margin-top: 0; }
       section.portfolio #portfolio-placeholder .portfolioElement ul {
-        display: inline-block;
-        -webkit-padding-start: 20px;
-        /*To counter normalize padding*/
-        width: 95%;
+        width: 90%;
         margin: auto; }
         section.portfolio #portfolio-placeholder .portfolioElement ul li {
-          list-style: none; }
+          list-style: none;
+          line-height: 1.2;
+          letter-spacing: 1.5; }
+      section.portfolio #portfolio-placeholder .portfolioElement .pfDescr, section.portfolio #portfolio-placeholder .portfolioElement .pfLanguages {
+        margin-bottom: 40px;
+        text-align: justify;
+        color: rgba(0, 0, 0, 0.8);
+        font-size: 15px; }
+      section.portfolio #portfolio-placeholder .portfolioElement .pfLanguages {
+        margin-top: 15px;
+        text-align: center; }
 
 /* Contact
 ===========================*/
 .contactN8 {
-  height: 800px; }
+  height: 750px; }
 
 .contact {
   height: 600px;
@@ -308,14 +355,15 @@ section.portfolio {
     .contact .content h1 {
       text-align: center;
       padding-top: 40px;
-      margin-bottom: 28px;
+      margin-bottom: 50px;
       font-family: "Oswald", sans-serif;
       font-size: 35px;
       color: #4f6272; }
-    .contact .content h4 {
+    .contact .content h4#contactDetails {
       text-align: center;
       font-family: "Oswald", sans-serif;
       font-size: 20px;
+      padding-bottom: 20px;
       color: #4f6272; }
     .contact .content p {
       display: inline;

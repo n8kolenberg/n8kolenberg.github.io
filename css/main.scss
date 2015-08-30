@@ -42,6 +42,57 @@ $portfolioTextColor: whitesmoke;
 	-webkit-align-content: center;
 }
 
+/* CSS RESET 
+===========================*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
 
 
 /*General 
@@ -69,7 +120,7 @@ body {
 ===========================*/
 
 .intro {
-	height: 100%;
+	height: $primarySectionHeight;
 	opacity: 0.9;
 	background: linear-gradient(to bottom, lighten($headerColor1, 20%) 30%, lighten($headerColor2, 10%) 90%);
 	background: -webkit-linear-gradient(to bottom, lighten($headerColor1, 15%) 30%, lighten($headerColor2, 10%) 90%);
@@ -226,6 +277,7 @@ body {
 				color: lighten($softRed, 5%);
 				display: block;
 				text-align: left;
+				padding-bottom: 10px;
 			}
 
 			.skills {
@@ -324,22 +376,6 @@ section.portfolio {
 				margin-top: $primaryPadding;
 				margin-bottom: $primaryPadding / 2;
 			}
-			
-			.pfDescr {
-				margin-bottom: $primaryPadding * 2;
-				text-align: justify;
-				color: darken($darkPurple, 10%);
-				max-width: 350px;
-				margin: auto;
-				font-size: $primaryPadding - 5px;
-			}
-
-			.pfLanguages {
-				@extend .pfDescr;
-				margin-top: $primaryPadding - 5px;
-				text-align: center;
-			}
-
 
 			img {
 				border: 5px solid lighten(mix($darkPurple, $darkGrey), 10%);
@@ -366,14 +402,27 @@ section.portfolio {
 			}
 
 			ul {
-				display: inline-block;
-				-webkit-padding-start: 20px; /*To counter normalize padding*/
-				width: 95%;
+				width: 90%;
 				margin: auto;
 
 				li {
 					list-style: none;
+					line-height: 1.2;
+					letter-spacing: 1.5;
 				}
+			}
+
+			.pfDescr {
+				margin-bottom: $primaryPadding * 2;
+				text-align: justify;
+				color: darken($darkPurple, 10%);
+				font-size: $primaryPadding - 5px;
+			}
+
+			.pfLanguages {
+				@extend .pfDescr;
+				margin-top: $primaryPadding - 5px;
+				text-align: center;
 			}
 		}	
 	}
@@ -383,7 +432,7 @@ section.portfolio {
 /* Contact
 ===========================*/
 .contactN8 {
-	height: $primarySectionHeight - 100px;
+	height: $primarySectionHeight - 150px;
 }
 
 .contact {
@@ -407,16 +456,17 @@ section.portfolio {
 		h1 {
 			text-align: center;
 			padding-top: $primaryPadding * 2;
-			margin-bottom: $primaryPadding * 1.4;
+			margin-bottom: $primaryPadding * 2.5;
 			font-family: $secondaryFont;
 			font-size: $headerFontSize;
 			color: $darkGrey;
 		}
 		
-		h4 {
+		h4#contactDetails {
 			text-align: center;
 			font-family: $secondaryFont;
 			font-size: $primaryPadding;
+			padding-bottom: $primaryPadding;
 			color: $darkGrey;
 		}
 
