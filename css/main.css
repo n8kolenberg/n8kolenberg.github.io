@@ -65,11 +65,12 @@ body {
   src: url("font/code.woff"); }
 /* Introduction
 ===========================*/
-section#home {
+.homeContent {
   height: 50rem; }
 
-.intro {
+.logoBG {
   height: 100%;
+  width: 100%;
   opacity: 0.9;
   background: linear-gradient(to bottom, rgba(244, 212, 212, 0.5) 30%, rgba(255, 255, 255, 0.5) 90%);
   background: -webkit-linear-gradient(to bottom, rgba(239, 191, 192, 0.5) 30%, rgba(255, 255, 255, 0.5) 90%);
@@ -77,7 +78,8 @@ section#home {
   background-size: cover;
   background-position: center;
   background-blend-mode: screen;
-  position: relative; }
+  position: relative;
+  z-index: 10; }
 
 .covervid-wrapper {
   position: absolute;
@@ -86,7 +88,8 @@ section#home {
   width: 100%;
   height: 100%; }
 
-.diamond {
+.logoCircle {
+  z-index: 102;
   position: absolute;
   top: 5px;
   left: 0;
@@ -99,26 +102,26 @@ section#home {
   height: 300px;
   margin: auto; }
   @media only screen and (min-width: 500px) {
-    .diamond {
+    .logoCircle {
       width: 350px;
       height: 350px; } }
-  .diamond .masthead, .diamond .masthead-intro {
+  .logoCircle .masthead, .logoCircle .masthead-intro {
     color: rgba(96, 3, 55, 0.9);
     margin: auto;
     margin-top: 105px;
     font-family: "Oswald", sans-serif;
     font-size: 40px; }
     @media only screen and (min-width: 418px) {
-      .diamond .masthead, .diamond .masthead-intro {
+      .logoCircle .masthead, .logoCircle .masthead-intro {
         font-size: 44px; } }
     @media only screen and (min-width: 500px) {
-      .diamond .masthead, .diamond .masthead-intro {
+      .logoCircle .masthead, .logoCircle .masthead-intro {
         margin-top: 115px; } }
-  .diamond .masthead-intro {
+  .logoCircle .masthead-intro {
     margin-top: 10px;
     font-size: 28px; }
     @media only screen and (min-width: 600px) {
-      .diamond .masthead-intro {
+      .logoCircle .masthead-intro {
         font-size: 32px; } }
 
 /* Description

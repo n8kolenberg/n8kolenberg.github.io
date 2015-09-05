@@ -8,109 +8,124 @@
 	<link href='https://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/css-fontello/code.css">
-	<link rel="stylesheet" href="js/cubeportfolio/css/cubeportfolio.min.css">
 	<link rel="stylesheet" href="js/fullpage-js/jquery.fullPage.css">
-    <link rel="stylesheet" href="css/main.css">
+    <!-- <link rel="stylesheet" href="css/main.css"> -->
 	<link href="img/favicon.png" rel="shortcut icon" type="image/x-icon">
 </head>
 
 <body>
 
-<div id="fullpage">
+<div id="fullpage" class="container">
 	<!-- Main Header -->
-	<div class="section mainHeader" id="Logo">
-		<div class="covervid-wrapper">
-		    <video class="covervid-video" autoplay loop muted poster="img/sunsky.jpg" styel="height: auto; width: 1195px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
-		        <source src="img/sunsky.mp4" type="video/mp4">
-		    </video>
+	<!-- <div class="section">
+		<div class="mainHeader container-fluid" id="home">
+			<div class="covervid-wrapper row">
+			    <video class="covervid-video" autoplay loop muted poster="img/sunsky.jpg" styel="height: auto; width: 1195px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+			        <source src="img/sunsky.mp4" type="video/mp4">
+			    </video>
+			</div>
 		</div>
-		<section class="intro container-fluid" id="home">
-			<div class="content row">
-				<div class="diamond">
-					<h2 class="masthead text-center">N8 Kolenberg</h2> <br>
-					<h3 class="masthead-intro text-center">Front End Web Dev</h3>
+			<div class="container-fluid">
+				<div class="homeContent row">
+					<div class="logoBG"></div>
+					<div class="logoCircle col-md-2">
+						<h2 class="masthead text-center">N8 Kolenberg</h2> <br>
+						<h3 class="masthead-intro text-center">Front End Web Dev</h3>
+					</div>
 				</div>
 			</div>
-		</section>
-	</div>
+	</div> -->
 
 	<!-- Introduction -->
-	<div class="section meetN8" id="profile">
-		<section class="description container-fluid">
-			<div class="content row">
-				<h1 class="text-center">Meet N8</h1>
-				<div class="flex-container">
-		            <img src="img/n8.jpg" class="n8Image" alt="Image of N8">
-					<p class="text-justify">My name is Nathaniel, which I like to abbreviate as N8 (Nate). I'm originally Dutch, but I lived and travelled in different countries and started my career in Google, Ireland. Throughout the years, I've become passionate about the web and how it works, and so I took courses on Treehouse and Udacity to learn more. In May 2015, I took a step further and enrolled with Thinkful to become a Front End Web Developer. I've completed the first course and while I'm going to tackle the AngularJS next, I built this website to practice my skills and showcase my portfolio (below), which I will continue to work on.
-		            <br>
-		            My projects up until now are created using <span>HTML5, CSS3, Sass, JavaScript, jQuery, Bootstrap, and Ajax.</span>
-		            <br>
-		            I currently reside in London, UK, where I'm working as a network analyst, while I continue studying coding and I've started to look for opportunities to put my self-taught skills into practice. In my free time, I like to keep my self up to date with tech-related news and learning more about Web Development. I also like travelling to see new places (mountains are my sweet spot!), playing console games and dreaming of one day moving to Barcelona with my girlfriend and getting ourselves a pug!
-		            <br><br>
-		            For more information about my studies and work experience, please download my resume <a href="https://www.dropbox.com/s/4jo8b0uj7kg55cm/Nathaniel%20Kolenberg%20CV.pdf?dl=0" target="_blank">here</a>.
-		            </p>         
-					
-					<div class="row skillSet">
-						<h2 class="skillsHeader">Skills and Experience</h2>
-				            <div class="skills">
-				            	<span class="icon-html5"></span>
-				            	<p class="skillDescr">HTML5</p>
-				            </div>
-				             <div class="skills">
-				            	<span class="icon-css3"></span>
-				            	<p class="skillDescr">CSS3, Sass</p>
-				            </div>
-				            <div class="skills">
-				            	<span class="icon-laptop"></span>
-				            	<p class="skillDescr">Responsive Layout</p>
-				            </div>
-				            <div class="skills">
-				            	<span class="icon-tablet"></span>
-				            	<p class="skillDescr">Mobile First Design</p>
-				            </div>
-				             <div class="skills">
-				            	<span class="icon-code"></span>
-				            	<p class="skillDescr">JavaScript and jQuery</p>
-				            </div>
-				            <div class="skills">
-				            	<span class="icon-git"></span>
-				            	<p class="skillDescr">Version Control with Git</p>
-				            </div>
-				            <div class="skills">
-				            	<span class="icon-wrench"></span>
-				            	<p class="skillDescr">Bootstrap, Ajax, APIs, and JSON</p>
-				            </div>
-			     	</div>
-		     	</div>
-		     </div>
-		</section>
-	</div>	
+  <div class="section meetN8 row" id="profile">
+  	<div class="page-header">
+  		<h1 class="text-center">Meet N8</h1>
+  	</div>
+  	<div class="col-xs-8 col-sm-4 col-md-3">
+  		<img src="img/n8.jpg" class="n8Image img-responsive img-rounded" alt="Image of N8">
+  	</div>
+  	<div class="col-xs-12 col-sm-8 col-md-6">
+  		<p class="text-justify">
+	  		My name is Nathaniel, which I like to abbreviate as N8 (Nate). I'm originally Dutch, but I lived and travelled in different countries and started my career in Google, Ireland. Throughout the years, I've become passionate about the web and how it works, and so I took courses on Treehouse and Udacity to learn more. In May 2015, I took a step further and enrolled with Thinkful to become a Front End Web Developer. I've completed the first course and while I'm going to tackle the AngularJS next, I built this website to practice my skills and showcase my portfolio (below), which I will continue to work on.
+        <br>
+        	My projects up until now are created using <span>HTML5, CSS3, Sass, JavaScript, jQuery, Bootstrap, and Ajax.</span>
+        <br>
+       	 	I currently reside in London, UK, where I'm working as a network analyst, while I continue studying coding and I've started to look for opportunities to put my self-taught skills into practice. In my free time, I like to keep my self up to date with tech-related news and learning more about Web Development. I also like travelling to see new places (mountains are my sweet spot!), playing console games and dreaming of one day moving to Barcelona with my girlfriend and getting ourselves a pug!
+        <br><br>
+        	For more information about my studies and work experience, please download my resume <a href="https://www.dropbox.com/s/4jo8b0uj7kg55cm/Nathaniel%20Kolenberg%20CV.pdf?dl=0" target="_blank">here</a>.
+  		</p>
+  	</div>
+	<div class="col-md-3 skillSet hidden-xs hidden-sm">
+		<h2 class="skillsHeader">Skills and Experience</h2>
+        <div class="skills">
+        	<span class="icon-html5"></span>
+        	<p class="skillDescr">HTML5</p>
+        </div>
+         <div class="skills">
+        	<span class="icon-css3"></span>
+        	<p class="skillDescr">CSS3, Sass</p>
+        </div>
+        <div class="skills">
+        	<span class="icon-laptop"></span>
+        	<p class="skillDescr">Responsive Layout</p>
+        </div>
+        <div class="skills">
+        	<span class="icon-tablet"></span>
+        	<p class="skillDescr">Mobile First Design</p>
+        </div>
+         <div class="skills">
+        	<span class="icon-code"></span>
+        	<p class="skillDescr">JavaScript and jQuery</p>
+        </div>
+        <div class="skills">
+        	<span class="icon-git"></span>
+        	<p class="skillDescr">Version Control with Git</p>
+        </div>
+        <div class="skills">
+        	<span class="icon-wrench"></span>
+        	<p class="skillDescr">Bootstrap, Ajax, APIs, and JSON</p>
+        </div>		
+	</div>
+  </div>
+
 		
 	<!-- Portfolio -->
-	<div class="section portfolioSection">
-		<section class="portfolio" id="n8portfolio">
-	        <div class="portfolioHeader">Portfolio</div>
+  <div class="section row portfolioSection" id="n8portfolio">
+  	<div class="page-header">
+  		<h1 class="text-center">Portfolio</h1>
+  	</div>
+	<div id="portfolio-placeholder">
+		<!-- This is where the portfolio pieces will be inserted by the app.js file -->
+	</div>	
+  </div>
 
-		        <div id="portfolio-placeholder">
-		        	<!-- This is where the portfolio pieces will be generated -->
-		        </div>
-
-	          
-	        </div>
-		</section>
 
 	<!-- Contact Details -->
-	<div class="section contactN8">
-		<section class="contact container-fluid" id="n8contact">
-			<div class="content row col-xs-6 col-xs-offset-6 col-sm-6 col-sm-offset-6 col-md-offset-2 col-md-6">
-				<h1 class="text-center"> Get in touch </h1>
-				<h4 id="contactDetails" class="hide"></h4>
-				<p class="text-center"><a href="mailto: nkolenberg@gmail.com"><span class="icon-paper-plane-empty"></span></a>
+  <div class="row section contactN8" id="n8contact">
+  	<div class="page-header">
+  		<h1 class="text-center">Get in touch</h1>
+  	</div>
+  	<div class="col-xs-12">
+  		<h4 id="contactDetails" class="hidden"></h4>
+		<div class="row">
+			<div class="col-xs-6">
+				<p class="text-center">
+				  <a href="mailto: nkolenberg@gmail.com">
+				    <span class="icon-paper-plane-empty"></span>
+				  </a>
 				</p>
-				<p class="text-center"><a href="tel:07472771489"><span class="icon-phone-outline"></span></a> 
+			</div>
+			<div class="col-xs-6">
+				<p class="text-center">
+				  <a href="tel:07472771489">
+				    <span class="icon-phone-outline"></span>
+				    </a> 
 				</p>
-			</div> 
-		</section>
+			</div>
+		</div>
+  	</div>
+  </div>
+
 
 	<!-- Social Media -->
 		<section class="social container-fluid">

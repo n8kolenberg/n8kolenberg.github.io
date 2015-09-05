@@ -118,21 +118,20 @@ body {
 
 /* Introduction
 ===========================*/
-
-section#home {
+.homeContent {
 	height: 50rem;
 }
 
-
-
-.intro {
+.logoBG {
 	height: 100%;
+	width: 100%;
 	opacity: 0.9;
 	background: linear-gradient(to bottom, lighten($headerColor1, 20%) 30%, lighten($headerColor2, 10%) 90%);
 	background: -webkit-linear-gradient(to bottom, lighten($headerColor1, 15%) 30%, lighten($headerColor2, 10%) 90%);
     @include bgImageProps;
     background-blend-mode: screen;
     position: relative;
+    z-index: 10;
 }
 
 .covervid-wrapper {
@@ -143,7 +142,8 @@ section#home {
     height: 100%;
 }
 
-.diamond {
+.logoCircle {
+	z-index: 102;
 	position: absolute;
 	top: 5px;
 	left: 0;

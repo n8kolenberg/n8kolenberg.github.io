@@ -11,14 +11,15 @@ function PortfolioPiece (options) {
 // and appends it to the placeholder div for portfolio pieces
 function appendPortfolio (portfolioArray) {
     for (var i = 0; i < portfolioArray.length; i++) {
-       var html = "<div class='portfolioElement'>";
-       html += "<a href= '" + portfolioArray[i].link + "' target='_blank'>";
-       html += "<img src='" + portfolioArray[i].thumbnail + "' class='portfolioThumbNail'></a>";
-       html += "<ul>";
-       html += "<li class='pfTitle'>" + portfolioArray[i].title + "</li>";
-       html += "<li class='pfDescr'>" + portfolioArray[i].description + "</li>";
-       html += "<li class='pfLanguages'>" + portfolioArray[i].languages + "</li>";
-       html += "</ul> </div>";
+       var html = "<a href= '" + portfolioArray[i].link + "' target='_blank'>";
+       html += "<div class='col-sm-6 col-md-4'>"
+       html += "<div class='thumbnail portfolioElement'>";
+       html += "<img src='" + portfolioArray[i].thumbnail + "' class='img-rounded portfolioThumbNail'>";
+       html += "<div class='caption'>";
+       html += "<h3 class='pfTitle text-center'>" + portfolioArray[i].title + "</h3>";
+       html += "<p class='pfDescr text-justify'>" + portfolioArray[i].description + "</p>";
+       html += "<p class='pfLanguages text-center'>" + portfolioArray[i].languages + "</p>";
+       html += "</div></div></a>";
        $('div#portfolio-placeholder').append(html); 
     }  
 };
@@ -71,7 +72,7 @@ var jquerySF = new PortfolioPiece({
     thumbnail : "img/jquerySF.jpg",
     title : "jQuery StreetFighter",
     link : "http://n8kolenberg.github.io/jquery-streetfighter/",
-    description : "For this project, I created an app that allows you to interact with Ryu using your mouse and the X key. Heads up! - the app plays music too.",
+    description : "For this project, I created an app that allows you to interact with Ryu using your mouse and the X key. Heads up! You might want to turn your volume down as the app plays music too.",
     languages: "HTML, CSS3, jQuery"
 });
 
@@ -88,7 +89,7 @@ var stackoAjax = new PortfolioPiece({
     thumbnail : "img/stacko.jpg",
     title : "StackOverlow Rep Builder",
     link : "http://n8kolenberg.github.io/ajax-stackoverflow/",
-    description : "Get unanswered questions on StackOverflow and answer them yourself! This app allows you to search for unanswered questions on coding topics and users with high SO reputations",
+    description : "This app allows you to search for unanswered questions on coding topics and users with high SO reputations",
     languages: "HTML, CSS3, jQuery, Ajax"
 });
 
@@ -141,13 +142,13 @@ $(function(){
     // When the user hovers over the contact icons, the information gets shown
     $("span.icon-paper-plane-empty").mouseenter(function(){
         var $contactDetails = $('#contactDetails');
-        $contactDetails.text("nkolenberg@gmail.com").fadeIn().removeClass("hide");
-    }) // End mouseenter
+        $contactDetails.text("nkolenberg@gmail.com").fadeIn().removeClass("hidden");
+    }); // End mouseenter
 
     $("span.icon-phone-outline").mouseenter(function(){
         var $contactDetails = $('#contactDetails');
-        $contactDetails.text("+44 (0) 747 277 1489").fadeIn().removeClass("hide");
-    }) // End mouseenter
+        $contactDetails.text("+44 (0) 747 277 1489").fadeIn().removeClass("hidden");
+    }); // End mouseenter
 
 
 
