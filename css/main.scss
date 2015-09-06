@@ -31,67 +31,31 @@ $portfolioTextColor: whitesmoke;
     background-position: center;
 }
 
-@mixin displayFlexBox {
-	display: flex;
-	display: -webkit-flex;
-	flex-direction: column;
-	-webkit-flex-direction: column;
-	justify-content: space-around;
-	-webkit-justify-content: space-around;
-	align-content: center;
-	-webkit-align-content: center;
-}
 
-/* CSS RESET 
+/* Typograhy 
 ===========================*/
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+.lead {
+	color: #d5c1f2;
+	margin-bottom: 75px;
 }
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+
+
+/* Buttons 
+===========================*/
+.btn-default {
+	border-width: 2px;
+	border-color: $lightGrey;
+	color: $lightGrey;
+	margin-right: 15px;
+	padding: 12px 22px;
+	&:hover {
+		background-color: #fff;
+		color: #957bba;
+		border-color: #fff;
+	}
 }
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
+
 
 
 
@@ -99,14 +63,7 @@ table {
 ===========================*/
 
 body {
-	width: 100%;
-	margin: 0;
-	box-sizing: border-box;
-	font-family: $primaryFont;
-}
 
-.hide {
-	display: none;
 }
 
 
@@ -115,24 +72,22 @@ body {
 	src: url('font/code.woff');
 }
 
+.container {
+	width: 95%;
+}
+
+
+
+/* Jumbotron
+===========================*/
+.jumbotron {
+
+}
+
 
 /* Introduction
 ===========================*/
-.homeContent {
-	height: 50rem;
-}
 
-.logoBG {
-	height: 100%;
-	width: 100%;
-	opacity: 0.9;
-	background: linear-gradient(to bottom, lighten($headerColor1, 20%) 30%, lighten($headerColor2, 10%) 90%);
-	background: -webkit-linear-gradient(to bottom, lighten($headerColor1, 15%) 30%, lighten($headerColor2, 10%) 90%);
-    @include bgImageProps;
-    background-blend-mode: screen;
-    position: relative;
-    z-index: 10;
-}
 
 .covervid-wrapper {
  	position: absolute;
@@ -142,364 +97,30 @@ body {
     height: 100%;
 }
 
-.logoCircle {
-	z-index: 102;
-	position: absolute;
-	top: 5px;
-	left: 0;
-	right: 0;
-	bottom: 100px;
-	background-color: lighten(mix($lightPurple, $headerColor2), 5%);
-	border-radius: 50%;
-	opacity: 0.8;
-	width: 300px;
-	height: 300px;
-	margin: auto;
-	@media only screen and (min-width: 500px) {
-	    	width: 350px;
-	    	height: 350px;
-	    }
-
-	.masthead {
-	    color: mix($darkPurple, $magenta);
-	    margin: auto;
-	    margin-top: 105px;
-	    font-family: $secondaryFont;
-	    font-size: $primaryPadding * 2;
-	    
-	    @media only screen and (min-width: 418px) {
-	    	font-size: $primaryPadding * 2.2;
-	    }
-	    @media only screen and (min-width: 500px) {
-	    	margin-top: 115px;
-	    }
-	}   
-
-    .masthead-intro {
-    	@extend .masthead;
-    	margin-top: 10px;
-    	font-size: $primaryPadding * 1.4;
-    	@media only screen and (min-width: 600px) {
-	    	font-size: $primaryPadding * 1.6;
-	    }
-    }
-}
 
 
 /* Description
 ===========================*/
 
-.description {
-	height: 100%;
-	background-color: lighten($lightPurple, 10%);
-	margin: auto;
-	.content {
-		width: 100%;
-		max-width: 900px;
-		padding-top: 20px;
-		margin: auto;
-		text-align: center;
-		@media only screen and (min-width: 950px) {
-			width: 90%;
-			height: $primarySectionHeight - 125px;
-		}
-		.flex-container {
-			width: 100%;
-			@include displayFlexBox;
-			@media only screen and (min-width: 900px) {
-				flex-direction: row;
-				-webkit-flex-direction: row;
-				flex-wrap: wrap;
-				-flex-wrap: wrap;
-			}
-		}
-
-		img.n8Image {
-			width: 250px;
-			max-width: 300px;
-			height: 280px;
-			text-align: center;
-			margin: auto;
-			margin-top: $primaryPadding / 2;
-			margin-bottom: $primaryPadding * 1.5;
-			border-radius: 20px;
-			box-shadow: 0 0 2px $primary-color;
-			@media only screen and (min-width: 900px) {
-				margin-bottom: $primaryPadding;
-			}
-		}
-
-		h1 {
-			font-family: $secondaryFont;
-			font-size: $headerFontSize;
-			margin-top: 25px;
-			margin-bottom: 25px;
-			color: lighten($softRed, 5%);
-		}
-
-		p {
-			width: 90%;
-			max-width: 600px;
-			margin: auto;
-			margin-bottom: 30px;
-			font-family: $primaryFont;
-			line-height: 1.5;
-			font-size: $pFontSize;
-			font-weight: lighter;
-			color: darken($darkGrey, 10%);
-			span {
-				font-weight: bold;
-				font-style: italic;
-				color: $magenta;
-			}
-			a {
-				color: lighten($magenta, 5%);
-				font-weight: bold;
-				&:hover {
-					color: $brightRed;
-				}
-			}
-			@media only screen and (min-width: 900px) {
-				width: 65%;
-				margin-bottom: $primaryPadding;
-				font-size: $pFontSize * 0.95;
-			}
-		}
-	}
-
-	.skillSet {
-		display: none;
-		@media only screen and (min-width: 1024px) {
-			display: block;
-			position: relative;
-			left: -300px;
-			top: -265px;
-			padding: 40px;
-			width: 350px;
-
-			.skillsHeader {
-				font: $primaryFont;
-				font-size: $primaryPadding * 1.025;
-				color: lighten($softRed, 5%);
-				display: block;
-				text-align: left;
-				padding-top: 10px;
-				padding-bottom: 10px;
-			}
-
-			.skills {
-				height: 30px;
-				@include displayFlexBox;
-				flex-direction: row;
-				-webkit-flex-direction: row;
-				flex-wrap: no-wrap;
-				-webkit-flex-wrap: no-wrap;
-				text-align: left;
-				
-				span {
-					display: inline;
-					text-align: left;
-					font-size: $primaryPadding;
-					color: $brightRed;
-				}
-
-				p.skillDescr {
-					width: 400px;
-					font-size: $primaryPadding - 5px;
-					margin-left: $primaryPadding;
-					padding-bottom: $primaryPadding;
-					text-align: left;
-				}
-			}
-		}
-
-	}
-}
-
 
 
 /* Portfolio
 =========================== */
-section.portfolio {
-	height: $primarySectionHeight * 5;
-	background-color: lighten(mix($darkPurple, $darkGrey), 10%);
 
-	@media only screen and (min-width: 752px) {
-		height: $primarySectionHeight * 2.7;
-}
-
-	@media only screen and (min-width: 1214px) {
-		height: $primarySectionHeight * 2.05;
-	}
-
-	.portfolioHeader {
-		font-size: $headerFontSize;
-		font-family: $secondaryFont;
-		color: $lightGrey;
-		text-align: center;
-		padding-top: $primaryPadding * 2.5;
-		padding-bottom: $primaryPadding * 1.6;
-		margin: auto;
-		margin-bottom: $primaryPadding * 1.5;
-		width: 100%;
-		height: 100px;
-	}
-
-	#portfolio-placeholder {
-		@include displayFlexBox;
-		width: 95%;
-		margin: auto;
-		
-		@media only screen and (min-width: 410px) {
-			flex-direction: row;
-			-webkit-flex-direction: row;
-			flex-wrap: wrap;
-			-webkit-flex-wrap: wrap;
-			justify-content: space-between;
-			-webkit-justify-content: space-between;
-		}
-		
-		
-
-		.portfolioElement {
-			width: 350px;
-			height: 500px;
-			background-color: $lightGrey;
-			border-radius: 10px;
-			margin: auto;
-			margin-bottom: $primaryPadding * 1.5;
-			display: block;
-
-			@media only screen and (min-width: 858px) {
-					width: 380px;
-				}
-			
-			.pfTitle {
-				font-family: $secondaryFont;
-				font-size: $primaryPadding * 1.2;
-				color: darken(mix($lightPurple, $magenta), 10%);
-				text-align: center;
-				margin-top: $primaryPadding;
-				margin-bottom: $primaryPadding / 2;
-			}
-
-			img {
-				border: 5px solid lighten(mix($darkPurple, $darkGrey), 10%);
-				border-radius: $primaryPadding / 2;
-				display: block;
-				width: 325px;
-				margin: auto;
-				margin-top: $primaryPadding;
-				height: 250px;
-				transition: all 200ms;
-				&:hover {
-					box-shadow: 0 0 20px lighten($darkPurple, 10%);
-				}
-
-				@media only screen and (min-width: 858px) {
-					width: 360px;
-				}		
-			}
-
-			a {
-				@extend img;
-				border: none;
-				margin-top: 0;
-			}
-
-			ul {
-				width: 90%;
-				margin: auto;
-
-				li {
-					list-style: none;
-					line-height: 1.2;
-					letter-spacing: 1.5;
-				}
-			}
-
-			.pfDescr {
-				margin-bottom: $primaryPadding * 2;
-				text-align: justify;
-				color: darken($darkPurple, 10%);
-				font-size: $primaryPadding - 5px;
-			}
-
-			.pfLanguages {
-				@extend .pfDescr;
-				margin-top: $primaryPadding - 5px;
-				text-align: center;
-			}
-		}	
-	}
-}
 
 
 /* Contact
 ===========================*/
-.contactN8 {
-	height: $primarySectionHeight - 150px;
-}
 
-.contact {
-	height: $primarySectionHeight - 300px;
-	background-image: url('../img/getintouch.jpg');
-	@include bgImageProps;
-	position: relative;
-
-	.content {
-		height: 280px;
-		width: 280px;
-		margin: auto;
-		position: absolute;
-		top: 0;
-		left: 0;
-		bottom: 0;
-		right: 0;
-		background-color: rgba(246, 246, 246, 0.85);
-		border-radius: 50%;
-
-		h1 {
-			text-align: center;
-			padding-top: $primaryPadding * 2;
-			margin-bottom: $primaryPadding * 2.5;
-			font-family: $secondaryFont;
-			font-size: $headerFontSize;
-			color: $darkGrey;
-		}
-		
-		h4#contactDetails {
-			text-align: center;
-			font-family: $secondaryFont;
-			font-size: $primaryPadding;
-			padding-bottom: $primaryPadding;
-			color: $darkGrey;
-		}
-
-		p {
-			display: inline;
-			font-size: $primaryPadding;
-			text-align: center;
-			padding: $primaryPadding * 0.8;
-
-			a {
-				text-decoration: none;
-				color: $secondary-color;
-				opacity: 0.8;
-				transition: all 100ms;
-				&:hover {
-					color: darken($secondary-color, 10%);
-					opacity: 1;
-				}
-			}
-		}
-	}
+.panel {
+	border-bottom: solid 1px #eee;
+	padding: 42px 0;
+	margin: 80px 0 10px 0;
 }
 
 
 .icon-paper-plane-empty, .icon-phone-outline {
 	font-size: $headerFontSize * 1.375;
-	margin-left: 17px;
 }
 
 

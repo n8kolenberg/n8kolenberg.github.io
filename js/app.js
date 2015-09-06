@@ -12,7 +12,7 @@ function PortfolioPiece (options) {
 function appendPortfolio (portfolioArray) {
     for (var i = 0; i < portfolioArray.length; i++) {
        var html = "<a href= '" + portfolioArray[i].link + "' target='_blank'>";
-       html += "<div class='col-sm-6 col-md-4'>"
+       html += "<div class='col-sm-6 col-md-4 pull-left'>"
        html += "<div class='thumbnail portfolioElement'>";
        html += "<img src='" + portfolioArray[i].thumbnail + "' class='img-rounded portfolioThumbNail'>";
        html += "<div class='caption'>";
@@ -101,13 +101,15 @@ $(function(){
 
     //Initialise Fullpage.js
     $('#fullpage').fullpage({
+
         //Navigation
         navigationTooltips: ['Home', 'Profile', 'Portfolio', 'Contact'],
         navigation: true,
         navigationPosition: 'right',
 
         //Scrolling
-        autoScrolling: false
+        autoScrolling: false,
+        semantic: true
 
     }); // End fullpage init
 
@@ -116,11 +118,17 @@ $(function(){
     appendPortfolio(portfolioArray);
 
 
+    // Adds the contact tooltips
+    $('[data-toggle="tooltip"]').tooltip({
+        container: 'body'
+    });
+
+
     //Initialise covervid.js
     $('.covervid-video').coverVid(1920, 1080);
 
 
-    $(document).on("click", "#nav li a", function(event){       
+    $(document).on("click", "a", function(event){       
         //This should set the variable "page" as either #home, #profile, #portfolio, or #contact:
         if( $(this).attr("href") ) {
             var page = $(this).attr("href");
@@ -137,6 +145,8 @@ $(function(){
             $("html, body").animate({ scrollTop: parseInt( $(page).position().top ) - 50 }, 1000);  //Soft-scroll for Desktops. (Accounts for fixed menu at the top.)
         }   
     }); // End on click
+
+
 
 
     // When the user hovers over the contact icons, the information gets shown
