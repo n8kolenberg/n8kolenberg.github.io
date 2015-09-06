@@ -49,8 +49,10 @@ body {
   #home h2, #home h3 {
     font-family: "Oswald", sans-serif;
     letter-spacing: 1.5; }
-  #home #shortcuts {
+  #home p#shortcuts {
     margin-top: 30px; }
+    #home p#shortcuts .btn-default {
+      margin-bottom: 20px; }
 
 /* Profile
 ===========================*/
