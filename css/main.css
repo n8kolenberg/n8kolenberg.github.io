@@ -1,86 +1,36 @@
 /* Main Variables */
 /* Mixins */
-/* CSS RESET 
+/* Typograhy 
 ===========================*/
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, section.portfolio #portfolio-placeholder .portfolioElement a, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline; }
+.lead {
+  color: #d5c1f2;
+  margin-bottom: 75px; }
 
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block; }
-
-body {
-  line-height: 1; }
-
-ol, ul {
-  list-style: none; }
-
-blockquote, q {
-  quotes: none; }
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none; }
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0; }
+/* Buttons 
+===========================*/
+.btn-default {
+  border-width: 2px;
+  border-color: #e3e3e3;
+  color: #e3e3e3;
+  margin-right: 15px;
+  padding: 12px 22px; }
+  .btn-default:hover {
+    background-color: #fff;
+    color: #957bba;
+    border-color: #fff; }
 
 /*General 
 ===========================*/
-body {
-  width: 100%;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: "Lato", sans-serif; }
-
-.hide {
-  display: none; }
-
 @fontface {
   font-family: fontello;
   src: url("font/code.woff"); }
+.container {
+  width: 95%; }
+
+/* Jumbotron
+===========================*/
 /* Introduction
 ===========================*/
-.homeContent {
-  height: 50rem; }
-
-.logoBG {
-  height: 100%;
-  width: 100%;
-  opacity: 0.9;
-  background: linear-gradient(to bottom, rgba(244, 212, 212, 0.5) 30%, rgba(255, 255, 255, 0.5) 90%);
-  background: -webkit-linear-gradient(to bottom, rgba(239, 191, 192, 0.5) 30%, rgba(255, 255, 255, 0.5) 90%);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-blend-mode: screen;
-  position: relative;
-  z-index: 10; }
-
 .covervid-wrapper {
   position: absolute;
   top: 0;
@@ -88,307 +38,19 @@ body {
   width: 100%;
   height: 100%; }
 
-.logoCircle {
-  z-index: 102;
-  position: absolute;
-  top: 5px;
-  left: 0;
-  right: 0;
-  bottom: 100px;
-  background-color: rgba(216, 224, 249, 0.75);
-  border-radius: 50%;
-  opacity: 0.8;
-  width: 300px;
-  height: 300px;
-  margin: auto; }
-  @media only screen and (min-width: 500px) {
-    .logoCircle {
-      width: 350px;
-      height: 350px; } }
-  .logoCircle .masthead, .logoCircle .masthead-intro {
-    color: rgba(96, 3, 55, 0.9);
-    margin: auto;
-    margin-top: 105px;
-    font-family: "Oswald", sans-serif;
-    font-size: 40px; }
-    @media only screen and (min-width: 418px) {
-      .logoCircle .masthead, .logoCircle .masthead-intro {
-        font-size: 44px; } }
-    @media only screen and (min-width: 500px) {
-      .logoCircle .masthead, .logoCircle .masthead-intro {
-        margin-top: 115px; } }
-  .logoCircle .masthead-intro {
-    margin-top: 10px;
-    font-size: 28px; }
-    @media only screen and (min-width: 600px) {
-      .logoCircle .masthead-intro {
-        font-size: 32px; } }
-
 /* Description
 ===========================*/
-.description {
-  height: 100%;
-  background-color: #e3e7fa;
-  margin: auto; }
-  .description .content {
-    width: 100%;
-    max-width: 900px;
-    padding-top: 20px;
-    margin: auto;
-    text-align: center; }
-    @media only screen and (min-width: 950px) {
-      .description .content {
-        width: 90%;
-        height: 775px; } }
-    .description .content .flex-container {
-      width: 100%;
-      display: flex;
-      display: -webkit-flex;
-      flex-direction: column;
-      -webkit-flex-direction: column;
-      justify-content: space-around;
-      -webkit-justify-content: space-around;
-      align-content: center;
-      -webkit-align-content: center; }
-      @media only screen and (min-width: 900px) {
-        .description .content .flex-container {
-          flex-direction: row;
-          -webkit-flex-direction: row;
-          flex-wrap: wrap;
-          -flex-wrap: wrap; } }
-    .description .content img.n8Image, .description .content section.portfolio #portfolio-placeholder .portfolioElement a.n8Image, section.portfolio #portfolio-placeholder .portfolioElement .description .content a.n8Image {
-      width: 250px;
-      max-width: 300px;
-      height: 280px;
-      text-align: center;
-      margin: auto;
-      margin-top: 10px;
-      margin-bottom: 30px;
-      border-radius: 20px;
-      box-shadow: 0 0 2px rgba(44, 62, 80, 0.9); }
-      @media only screen and (min-width: 900px) {
-        .description .content img.n8Image, .description .content section.portfolio #portfolio-placeholder .portfolioElement a.n8Image, section.portfolio #portfolio-placeholder .portfolioElement .description .content a.n8Image {
-          margin-bottom: 20px; } }
-    .description .content h1 {
-      font-family: "Oswald", sans-serif;
-      font-size: 35px;
-      margin-top: 25px;
-      margin-bottom: 25px;
-      color: #ac405f; }
-    .description .content p {
-      width: 90%;
-      max-width: 600px;
-      margin: auto;
-      margin-bottom: 30px;
-      font-family: "Lato", sans-serif;
-      line-height: 1.5;
-      font-size: 18px;
-      font-weight: lighter;
-      color: #3a4854; }
-      .description .content p span {
-        font-weight: bold;
-        font-style: italic;
-        color: #89043d; }
-      .description .content p a {
-        color: #a20548;
-        font-weight: bold; }
-        .description .content p a:hover {
-          color: #ef2d56; }
-      @media only screen and (min-width: 900px) {
-        .description .content p {
-          width: 65%;
-          margin-bottom: 20px;
-          font-size: 17.1px; } }
-  .description .skillSet {
-    display: none; }
-    @media only screen and (min-width: 1024px) {
-      .description .skillSet {
-        display: block;
-        position: relative;
-        left: -300px;
-        top: -265px;
-        padding: 40px;
-        width: 350px; }
-        .description .skillSet .skillsHeader {
-          font: "Lato", sans-serif;
-          font-size: 20.5px;
-          color: #ac405f;
-          display: block;
-          text-align: left;
-          padding-top: 10px;
-          padding-bottom: 10px; }
-        .description .skillSet .skills {
-          height: 30px;
-          display: flex;
-          display: -webkit-flex;
-          flex-direction: column;
-          -webkit-flex-direction: column;
-          justify-content: space-around;
-          -webkit-justify-content: space-around;
-          align-content: center;
-          -webkit-align-content: center;
-          flex-direction: row;
-          -webkit-flex-direction: row;
-          flex-wrap: no-wrap;
-          -webkit-flex-wrap: no-wrap;
-          text-align: left; }
-          .description .skillSet .skills span {
-            display: inline;
-            text-align: left;
-            font-size: 20px;
-            color: #ef2d56; }
-          .description .skillSet .skills p.skillDescr {
-            width: 400px;
-            font-size: 15px;
-            margin-left: 20px;
-            padding-bottom: 20px;
-            text-align: left; } }
-
 /* Portfolio
 =========================== */
-section.portfolio {
-  height: 4500px;
-  background-color: rgba(82, 81, 117, 0.9); }
-  @media only screen and (min-width: 752px) {
-    section.portfolio {
-      height: 2430px; } }
-  @media only screen and (min-width: 1214px) {
-    section.portfolio {
-      height: 1845.0px; } }
-  section.portfolio .portfolioHeader {
-    font-size: 35px;
-    font-family: "Oswald", sans-serif;
-    color: #e3e3e3;
-    text-align: center;
-    padding-top: 50px;
-    padding-bottom: 32px;
-    margin: auto;
-    margin-bottom: 30px;
-    width: 100%;
-    height: 100px; }
-  section.portfolio #portfolio-placeholder {
-    display: flex;
-    display: -webkit-flex;
-    flex-direction: column;
-    -webkit-flex-direction: column;
-    justify-content: space-around;
-    -webkit-justify-content: space-around;
-    align-content: center;
-    -webkit-align-content: center;
-    width: 95%;
-    margin: auto; }
-    @media only screen and (min-width: 410px) {
-      section.portfolio #portfolio-placeholder {
-        flex-direction: row;
-        -webkit-flex-direction: row;
-        flex-wrap: wrap;
-        -webkit-flex-wrap: wrap;
-        justify-content: space-between;
-        -webkit-justify-content: space-between; } }
-    section.portfolio #portfolio-placeholder .portfolioElement {
-      width: 350px;
-      height: 500px;
-      background-color: #e3e3e3;
-      border-radius: 10px;
-      margin: auto;
-      margin-bottom: 30px;
-      display: block; }
-      @media only screen and (min-width: 858px) {
-        section.portfolio #portfolio-placeholder .portfolioElement {
-          width: 380px; } }
-      section.portfolio #portfolio-placeholder .portfolioElement .pfTitle {
-        font-family: "Oswald", sans-serif;
-        font-size: 24px;
-        color: #824f7b;
-        text-align: center;
-        margin-top: 20px;
-        margin-bottom: 10px; }
-      section.portfolio #portfolio-placeholder .portfolioElement img, section.portfolio #portfolio-placeholder .portfolioElement a {
-        border: 5px solid rgba(82, 81, 117, 0.9);
-        border-radius: 10px;
-        display: block;
-        width: 325px;
-        margin: auto;
-        margin-top: 20px;
-        height: 250px;
-        transition: all 200ms; }
-        section.portfolio #portfolio-placeholder .portfolioElement img:hover, section.portfolio #portfolio-placeholder .portfolioElement a:hover {
-          box-shadow: 0 0 20px rgba(72, 4, 95, 0.8); }
-        @media only screen and (min-width: 858px) {
-          section.portfolio #portfolio-placeholder .portfolioElement img, section.portfolio #portfolio-placeholder .portfolioElement a {
-            width: 360px; } }
-      section.portfolio #portfolio-placeholder .portfolioElement a {
-        border: none;
-        margin-top: 0; }
-      section.portfolio #portfolio-placeholder .portfolioElement ul {
-        width: 90%;
-        margin: auto; }
-        section.portfolio #portfolio-placeholder .portfolioElement ul li {
-          list-style: none;
-          line-height: 1.2;
-          letter-spacing: 1.5; }
-      section.portfolio #portfolio-placeholder .portfolioElement .pfDescr, section.portfolio #portfolio-placeholder .portfolioElement .pfLanguages {
-        margin-bottom: 40px;
-        text-align: justify;
-        color: rgba(0, 0, 0, 0.8);
-        font-size: 15px; }
-      section.portfolio #portfolio-placeholder .portfolioElement .pfLanguages {
-        margin-top: 15px;
-        text-align: center; }
-
 /* Contact
 ===========================*/
-.contactN8 {
-  height: 750px; }
-
-.contact {
-  height: 600px;
-  background-image: url("../img/getintouch.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  position: relative; }
-  .contact .content {
-    height: 280px;
-    width: 280px;
-    margin: auto;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background-color: rgba(246, 246, 246, 0.85);
-    border-radius: 50%; }
-    .contact .content h1 {
-      text-align: center;
-      padding-top: 40px;
-      margin-bottom: 50px;
-      font-family: "Oswald", sans-serif;
-      font-size: 35px;
-      color: #4f6272; }
-    .contact .content h4#contactDetails {
-      text-align: center;
-      font-family: "Oswald", sans-serif;
-      font-size: 20px;
-      padding-bottom: 20px;
-      color: #4f6272; }
-    .contact .content p {
-      display: inline;
-      font-size: 20px;
-      text-align: center;
-      padding: 16px; }
-      .contact .content p a {
-        text-decoration: none;
-        color: #af1538;
-        opacity: 0.8;
-        transition: all 100ms; }
-        .contact .content p a:hover {
-          color: #811029;
-          opacity: 1; }
+.panel {
+  border-bottom: solid 1px #eee;
+  padding: 42px 0;
+  margin: 80px 0 10px 0; }
 
 .icon-paper-plane-empty, .icon-phone-outline {
-  font-size: 48.125px;
-  margin-left: 17px; }
+  font-size: 48.125px; }
 
 /* Social
 ===========================*/
