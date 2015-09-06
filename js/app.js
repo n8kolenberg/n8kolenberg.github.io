@@ -96,6 +96,16 @@ var stackoAjax = new PortfolioPiece({
 var portfolioArray = [soundful, batquiz, HotorCold, FizzBuzz, Karma, jquerySF, Doobiedo, stackoAjax];
 
 
+// Allow the user to use the buttons on the home section to scroll down
+$("#shortcuts a").click(function(event){
+    event.preventDefault();
+    var url = $(this).attr('href');
+    $('html, body').animate({
+        scrollTop: $(url).offset().top
+    }, 2000);
+});
+
+
 // Document.ready
 $(function(){
 
@@ -138,6 +148,8 @@ $(function(){
         var $contactDetails = $('#contactDetails');
         $contactDetails.text("+44 (0) 747 277 1489").fadeIn().removeClass("hidden");
     }); // End mouseenter
+
+
 
 
 
