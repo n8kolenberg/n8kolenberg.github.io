@@ -145,7 +145,10 @@ body {
 			display: inline;
 		}
 		p {
+			color: lighten($darkBlue, 20%);
 			display: inline;
+			font-size: 13px;
+			font-weight: bold;
 		}
 		
 	}

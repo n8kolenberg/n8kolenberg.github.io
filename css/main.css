@@ -80,7 +80,10 @@ body {
       color: rgba(148, 176, 218, 0.8);
       display: inline; }
     #profile .skills p {
-      display: inline; }
+      color: #3f60a6;
+      display: inline;
+      font-size: 13px;
+      font-weight: bold; }
 
 /* Portfolio
 =========================== */
