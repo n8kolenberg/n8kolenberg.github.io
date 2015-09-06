@@ -12,11 +12,11 @@ $pFontSize:18px;
 $headerColor1: rgba(224, 130, 131, 0.5);
 $headerColor2: rgba(228, 241, 254, 0.5);
 
-$softRed: rgba(153, 57, 85, 100);
-$brightRed: rgba(239, 45, 86, 100);
-$darkGrey: rgba(79, 98, 114, 100);
-$lightPurple: rgba(183, 195, 243, 100);
-$darkPurple: rgba(35, 2, 46, 0.8);
+$darkBlue: rgba(35, 53, 92, 100);
+$blue: rgba(75, 131, 193, 100);
+$brightBlue: rgba(126, 180, 234, 100);
+$lightBlue: rgba(220, 237, 255, 100);
+$charcoalBlue: rgba(148, 176, 218, 0.8);
 $lightGrey: rgba(227, 227, 227, 1);
 $magenta: rgba(137, 4, 61, 100);
 
@@ -32,14 +32,6 @@ $portfolioTextColor: whitesmoke;
 }
 
 
-/* Typograhy 
-===========================*/
-
-.lead {
-	color: #d5c1f2;
-	margin-bottom: 75px;
-}
-
 
 /* Buttons 
 ===========================*/
@@ -49,13 +41,13 @@ $portfolioTextColor: whitesmoke;
 	color: $lightGrey;
 	margin-right: 15px;
 	padding: 12px 22px;
+	transition: all 150ms;
 	&:hover {
 		background-color: #fff;
-		color: #957bba;
+		color: darken($charcoalBlue, 10%);
 		border-color: #fff;
 	}
 }
-
 
 
 
@@ -63,80 +55,181 @@ $portfolioTextColor: whitesmoke;
 ===========================*/
 
 body {
-
+ 	box-sizing: border-box;
+ 	width: 100%;
+ 	background-color: lighten($charcoalBlue, 25%);
 }
 
+.page-header {
+	font-family: $secondaryFont;
+	border-bottom: 1px solid $brightBlue;
+}
 
 @fontface {
 	font-family: fontello;
 	src: url('font/code.woff');
 }
 
-.container {
-	width: 95%;
-}
-
-
-
-/* Jumbotron
-===========================*/
 .jumbotron {
-
+	margin-bottom: 0;
 }
+
+.container {
+	width: 93%;
+	
+}
+
 
 
 /* Introduction
 ===========================*/
-
-
-.covervid-wrapper {
- 	position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+#home {
+	background: url('../img/calm.jpeg');
+	@include bgImageProps;
+	.lead {
+		color: lighten(mix($charcoalBlue, $lightBlue), 5%);
+		margin-bottom: 75px;
+		max-width: 400px;
+		margin: auto;
+	}
+	h2, h3 {
+		font-family: $secondaryFont;
+		letter-spacing: 1.5;
+	}
+	#shortcuts {
+		margin-top: 30px;
+	}
 }
 
 
 
-/* Description
+/* Profile
 ===========================*/
+#profile {
+	background-color: lighten($lightBlue, 5%);
+	.page-header {
+		color: $darkBlue;
+	}
 
+	p {
+		font-family: "Helvetica Neue", Helvetica, sans-serif;
+		font-size: 17px;
+		color: darken(mix($darkBlue, $charcoalBlue), 20%);
+	}
+	
+	a {
+		color: $brightBlue;
+		&:hover {
+			color: $magenta;
+		}
+	}
 
+	.skillsHeader {
+		font-family: $secondaryFont;
+		font-size: 25px;
+		color: $blue;
+	}
+	
+	.n8Image {
+		margin-bottom: 25px;
+	}
+
+	.skills {
+		margin: 5px 5px;
+		span {
+			color: $charcoalBlue;
+			display: inline;
+		}
+		p {
+			display: inline;
+		}
+		
+	}
+}
 
 /* Portfolio
 =========================== */
+#portfolio {
+	.page-header {
+		color: mix($darkBlue, $charcoalBlue);
+	}
+	a {
+		text-decoration: none;
+	}
+
+	.portfolioElement {
+		.pfTitle {
+			font-family: $secondaryFont;
+		}
+
+		transition: all 200ms;
+		&:hover {
+			background-color: darken(mix($darkBlue, $brightBlue), 2%);
+			border: 1px solid $charcoalBlue;
+			box-shadow: 0 0 4px $charcoalBlue;
+			.caption {
+				color: lighten($lightBlue, 10%);
+			}
+			
+		}
+	}
+}
 
 
 
 /* Contact
 ===========================*/
 
+#contact {
+	.jumbotron {
+		background: url('../img/see.jpeg');
+		@include bgImageProps;
+		height: 600px;
+	}
+	p {
+		margin-top: 35px;
+	}
+	
+}
+
 .panel {
-	border-bottom: solid 1px #eee;
-	padding: 42px 0;
-	margin: 80px 0 10px 0;
+	padding: 20px 10px;
+	background-color: transparent;
+	opacity: 0.8;
+	max-width: 300px;
+	margin: auto;
+
+
+	.btn-group {
+		margin-top: 70px;
+		padding-right: 0;
+		.btn {
+			border: 3px solid rgba($brightBlue, 0.7);
+			background-color: $brightBlue;
+			transition: all 100ms;
+			&:hover {
+				background-color: $blue;
+				border-color: $blue;				
+			}
+			.icon-paper-plane-empty, .icon-phone-outline {
+				font-size: $headerFontSize * 1.375;
+				color: lighten($lightBlue, 10%);
+			}
+		}
+	}
 }
-
-
-.icon-paper-plane-empty, .icon-phone-outline {
-	font-size: $headerFontSize * 1.375;
-}
-
 
 
 /* Social
 ===========================*/
 
 .social {
-	height: $primarySectionHeight * 0.2;
-	background-color: rgba(240, 245, 247, 1);
+	background-color: transparent;
+	margin-bottom: 20px;
 	
 	ul {
 		font-family: 'fontello';
 		font-size: $headerFontSize;
-		width: 100%;
-		margin: auto;
 		padding-top: $primaryPadding;
 		padding-bottom: $primaryPadding;
 
@@ -154,41 +247,35 @@ body {
 				color: rgba(23, 131, 185, 1);
 			}
 			.icon-github {
-				color: mix($darkPurple, $darkGrey);
+				color: darken(mix($darkBlue, $charcoalBlue), 10%);
 			}
 			.icon-instagram {
 				color: rgba(129, 84, 65, 1);
 			}
 			.icon-slack {
-				color: saturate(mix($lightPurple, $darkPurple), 20%);
+				color: saturate(mix($brightBlue, $darkBlue), 20%);
 			}
 
 		}
 	}
 
 	.madeWLove {
-	    text-align: center;
-		width: 300px;
 		font-family: $primaryFont;
-		color: $darkGrey;
-		padding-top: $primaryPadding;
-		font-size: $primaryPadding - 5px;
-		margin: auto;
+		color: darken($blue, 10%);
 	}
 
 	#imgCredit {
 		@extend .madeWLove;
 		font-size: 15px;
-		height: 20px;
 		padding-top: 10px;
 		padding-bottom: 0;
 
 		a {
 			display: inline;
 			text-decoration: none;
-			color: $brightRed;
+			color: $brightBlue;
 			 &:hover {
-				color: $softRed;
+				color: $magenta;
 			}
 		}
 	}
@@ -201,13 +288,13 @@ body {
 
 #fp-nav ul li {
 	.fp-tooltip {
-		color: mix($brightRed, $softRed);
+		color: saturate(mix($lightBlue, $blue),20%);
 		font-weight: bold;
 		font-size: larger;
 	}
 
 	a span {
-		background-color: darken($darkGrey, 10%);
+		background-color: lighten($darkBlue, 10%);
 	}
 }
 

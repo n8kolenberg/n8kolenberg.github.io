@@ -128,27 +128,6 @@ $(function(){
     $('.covervid-video').coverVid(1920, 1080);
 
 
-    $(document).on("click", "a", function(event){       
-        //This should set the variable "page" as either #home, #profile, #portfolio, or #contact:
-        if( $(this).attr("href") ) {
-            var page = $(this).attr("href");
-        }
-        else {
-            var page = $(this).closest("a").attr("href");
-        }
-            
-        //For soft-scrolling:       
-        if( $("header").css("display") === "none" ) {
-            $("html, body").animate({ scrollTop: parseInt( $(page).position().top )}, 1000);  //Soft-scroll for mobile devices.
-        }
-        else {
-            $("html, body").animate({ scrollTop: parseInt( $(page).position().top ) - 50 }, 1000);  //Soft-scroll for Desktops. (Accounts for fixed menu at the top.)
-        }   
-    }); // End on click
-
-
-
-
     // When the user hovers over the contact icons, the information gets shown
     $("span.icon-paper-plane-empty").mouseenter(function(){
         var $contactDetails = $('#contactDetails');

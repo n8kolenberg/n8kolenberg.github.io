@@ -1,11 +1,5 @@
 /* Main Variables */
 /* Mixins */
-/* Typograhy 
-===========================*/
-.lead {
-  color: #d5c1f2;
-  margin-bottom: 75px; }
-
 /* Buttons 
 ===========================*/
 .btn-default {
@@ -13,55 +7,135 @@
   border-color: #e3e3e3;
   color: #e3e3e3;
   margin-right: 15px;
-  padding: 12px 22px; }
+  padding: 12px 22px;
+  transition: all 150ms; }
   .btn-default:hover {
     background-color: #fff;
-    color: #957bba;
+    color: rgba(110, 148, 205, 0.8);
     border-color: #fff; }
 
 /*General 
 ===========================*/
+body {
+  box-sizing: border-box;
+  width: 100%;
+  background-color: rgba(243, 246, 251, 0.8); }
+
+.page-header {
+  font-family: "Oswald", sans-serif;
+  border-bottom: 1px solid #7eb4ea; }
+
 @fontface {
   font-family: fontello;
   src: url("font/code.woff"); }
-.container {
-  width: 95%; }
+.jumbotron {
+  margin-bottom: 0; }
 
-/* Jumbotron
-===========================*/
+.container {
+  width: 93%; }
+
 /* Introduction
 ===========================*/
-.covervid-wrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%; }
+#home {
+  background: url("../img/calm.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+  #home .lead {
+    color: rgba(212, 227, 245, 0.9);
+    margin-bottom: 75px;
+    max-width: 400px;
+    margin: auto; }
+  #home h2, #home h3 {
+    font-family: "Oswald", sans-serif;
+    letter-spacing: 1.5; }
+  #home #shortcuts {
+    margin-top: 30px; }
 
-/* Description
+/* Profile
 ===========================*/
+#profile {
+  background-color: #f6faff; }
+  #profile .page-header {
+    color: #23355c; }
+  #profile p {
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 17px;
+    color: rgba(43, 55, 77, 0.9); }
+  #profile a {
+    color: #7eb4ea; }
+    #profile a:hover {
+      color: #89043d; }
+  #profile .skillsHeader {
+    font-family: "Oswald", sans-serif;
+    font-size: 25px;
+    color: #4b83c1; }
+  #profile .n8Image {
+    margin-bottom: 25px; }
+  #profile .skills {
+    margin: 5px 5px; }
+    #profile .skills span {
+      color: rgba(148, 176, 218, 0.8);
+      display: inline; }
+    #profile .skills p {
+      display: inline; }
+
 /* Portfolio
 =========================== */
+#portfolio .page-header {
+  color: rgba(80, 102, 142, 0.9); }
+#portfolio a {
+  text-decoration: none; }
+#portfolio .portfolioElement {
+  transition: all 200ms; }
+  #portfolio .portfolioElement .pfTitle {
+    font-family: "Oswald", sans-serif; }
+  #portfolio .portfolioElement:hover {
+    background-color: #4e709c;
+    border: 1px solid rgba(148, 176, 218, 0.8);
+    box-shadow: 0 0 4px rgba(148, 176, 218, 0.8); }
+    #portfolio .portfolioElement:hover .caption {
+      color: white; }
+
 /* Contact
 ===========================*/
-.panel {
-  border-bottom: solid 1px #eee;
-  padding: 42px 0;
-  margin: 80px 0 10px 0; }
+#contact .jumbotron {
+  background: url("../img/see.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 600px; }
+#contact p {
+  margin-top: 35px; }
 
-.icon-paper-plane-empty, .icon-phone-outline {
-  font-size: 48.125px; }
+.panel {
+  padding: 20px 10px;
+  background-color: transparent;
+  opacity: 0.8;
+  max-width: 300px;
+  margin: auto; }
+  .panel .btn-group {
+    margin-top: 70px;
+    padding-right: 0; }
+    .panel .btn-group .btn {
+      border: 3px solid rgba(126, 180, 234, 0.7);
+      background-color: #7eb4ea;
+      transition: all 100ms; }
+      .panel .btn-group .btn:hover {
+        background-color: #4b83c1;
+        border-color: #4b83c1; }
+      .panel .btn-group .btn .icon-paper-plane-empty, .panel .btn-group .btn .icon-phone-outline {
+        font-size: 48.125px;
+        color: white; }
 
 /* Social
 ===========================*/
 .social {
-  height: 180px;
-  background-color: #f0f5f7; }
+  background-color: transparent;
+  margin-bottom: 20px; }
   .social ul {
     font-family: 'fontello';
     font-size: 35px;
-    width: 100%;
-    margin: auto;
     padding-top: 20px;
     padding-bottom: 20px; }
     .social ul a {
@@ -75,38 +149,32 @@
       .social ul a .icon-linkedin {
         color: #1783b9; }
       .social ul a .icon-github {
-        color: rgba(61, 60, 87, 0.9); }
+        color: rgba(62, 79, 109, 0.9); }
       .social ul a .icon-instagram {
         color: #815441; }
       .social ul a .icon-slack {
-        color: rgba(107, 95, 187, 0.9); }
+        color: #3972bb; }
   .social .madeWLove, .social #imgCredit {
-    text-align: center;
-    width: 300px;
     font-family: "Lato", sans-serif;
-    color: #4f6272;
-    padding-top: 20px;
-    font-size: 15px;
-    margin: auto; }
+    color: #386aa1; }
   .social #imgCredit {
     font-size: 15px;
-    height: 20px;
     padding-top: 10px;
     padding-bottom: 0; }
     .social #imgCredit a {
       display: inline;
       text-decoration: none;
-      color: #ef2d56; }
+      color: #7eb4ea; }
       .social #imgCredit a:hover {
-        color: #993955; }
+        color: #89043d; }
 
 /* Navigation dots
 ===========================*/
 #fp-nav ul li .fp-tooltip {
-  color: #c43356;
+  color: #86b7ee;
   font-weight: bold;
   font-size: larger; }
 #fp-nav ul li a span {
-  background-color: #3a4854; }
+  background-color: #314a81; }
 
 /*# sourceMappingURL=main.css.map */
