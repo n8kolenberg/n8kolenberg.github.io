@@ -9,6 +9,9 @@
   margin-right: 15px;
   padding: 12px 22px;
   transition: all 150ms; }
+  .btn-default:visited {
+    color: #e3e3e3;
+    border-color: #e3e3e3; }
   .btn-default:hover {
     background-color: #fff;
     color: rgba(110, 148, 205, 0.8);
