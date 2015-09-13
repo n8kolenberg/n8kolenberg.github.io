@@ -90,8 +90,13 @@ body {
 /* Introduction
 ===========================*/
 #home {
-	background: url('../img/calm.jpeg');
+	background: url('../img/calmMedium.jpeg');
 	@include bgImageProps;
+/*	@media (min-width: 768px) {
+		background: url('../img/calmMedium.jpeg');
+		@include bgImageProps;
+	}*/
+	
 	.lead {
 		color: lighten(mix($charcoalBlue, $lightBlue), 5%);
 		margin-bottom: 75px;

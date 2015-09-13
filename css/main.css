@@ -40,10 +40,14 @@ body {
 /* Introduction
 ===========================*/
 #home {
-  background: url("../img/calm.jpeg");
+  background: url("../img/calmMedium.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center; }
+  background-position: center;
+  /*	@media (min-width: 768px) {
+  		background: url('../img/calmMedium.jpeg');
+  		@include bgImageProps;
+  	}*/ }
   #home .lead {
     color: rgba(212, 227, 245, 0.9);
     margin-bottom: 75px;
